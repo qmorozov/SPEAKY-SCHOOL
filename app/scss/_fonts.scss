@@ -1,0 +1,71 @@
+// === RELAWEY ===
+@font-face {
+    // === LIGHT ===
+    font-family: 'Relawey';
+    src: url('../fonts/Relawey/ralewaylight.woff2') format('woff2'), url('../fonts/Relawey/ralewaylight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    // === MEDIUM ===
+    font-family: 'Relawey';
+    src: url('../fonts/Relawey/ralewaymedium.woff2') format('woff2'), url('../fonts/Relawey/ralewaymedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    // === SEMI_BOLD ===
+    font-family: 'Relawey';
+    src: url('../fonts/Relawey/ralewaysemibold.woff2') format('woff2'), url('../fonts/Relawey/ralewaysemibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+// === RELAWEY ===
+// === NEXTART ===
+@font-face {
+    // === NORMAL ===
+    font-family: 'NextArt';
+    src: url('../fonts/NextArt/Nextart.woff2') format('woff2'), url('../fonts/NextArt/Nextart.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    // === HEAVY ===
+    font-family: 'NextArt';
+    src: url('../fonts/NextArt/Nextartheavy.woff2') format('woff2'), url('../fonts/NextArt/Nextartheavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+// === /NEXTART ===
+// === JOURNALISM ===
+@font-face {
+    // === NORMAL ===
+    font-family: 'Journalism';
+    src: url('../fonts/Journalism/JournalismRegular.woff2') format('woff2'), url('../fonts/Journalism/JournalismRegular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+// === /JOURNALISM ===
+// === JOST ===
+@font-face {
+    // === NORMAL ===
+    font-family: 'Jost';
+    src: url('../fonts/Jost/Jost-Black.woff2') format('woff2'), url('../fonts/Jost/Jost-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+// === /JOST ===

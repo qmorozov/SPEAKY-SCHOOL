@@ -1,0 +1,505 @@
+@import '_vars';
+@import '_fonts';
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Relawey', sans-serif;
+    font-weight: $fw-regular;
+    font-size: $fs-s;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
+.section-inner {
+    max-width: 1260px;
+    margin: 0 auto;
+}
+
+.section-outer {
+    padding-bottom: $base*35;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    @include NextArt;
+    font-weight: $fw-heavy;
+    font-size: $fs-xxl;
+    line-height: $base*16.5;
+    letter-spacing: 0.02em;
+    font-feature-settings: 'kern' off;
+}
+
+.btn {
+    border: none;
+    cursor: pointer;
+    font-size: $fs-m;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: $color-secondary-50;
+    padding: 18px 38px;
+    background-color: $color-primary-50;
+    border-radius: 30px;
+    outline: none;
+    transition: all $transition;
+    &:hover {
+        box-shadow: 0px 10px 10px rgba(30, 95, 93, 0.4);
+    }
+    &:active {
+        background: #175654;
+    }
+    &:focus {
+        box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.15);
+    }
+}
+
+.text {
+    font-weight: $fw-light;
+    letter-spacing: 0.02em;
+    line-height: $base*6.5;
+    color: $color-secondary-200;
+}
+
+.title {
+    display: inline-block;
+    @include NextArt;
+    font-size: $fs-l;
+    font-weight: $fw-heavy;
+    line-height: $base*8.5;
+    position: relative;
+    //   z-index: 100;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    margin-bottom: $base*7.5;
+    &:before {
+        content: "";
+        position: absolute;
+        background-color: $color-primary-400;
+        height: $base*2.5;
+        width: 100%;
+        z-index: -1;
+        top: 50%;
+    }
+}
+
+// === FORM POPUP LESSON ====
+.popup {
+    &--trial {
+        max-width: 1046px;
+        width: 100%;
+        .popup-btn {
+            right: 35%;
+        }
+        .popup-wrapper {
+            background-image: url(../images/default-images/illustration-2.png);
+            background-size: contain;
+        }
+    }
+    &--payment,
+    &--call {
+        max-width: 860px;
+        width: 100%;
+    }
+    &--payment {
+        .popup-inner {
+            max-width: 425px;
+        }
+        .popup-wrapper {
+            background-image: url(../images/default-images/illustration-3.png);
+            background-size: contain;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                background-image: url(../images/default-images/illustration-4.png);
+                background-repeat: no-repeat;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: inherit;
+            }
+        }
+    }
+    &--call {
+        .popup-inner {
+            max-width: 350px;
+        }
+        .popup__item-personal-date-item {
+            .popup__item-personal {
+                &-phone.popup-input {
+                    max-width: 350px;
+                    width: 100%;
+                }
+                &-name.popup-input {
+                    max-width: 350px;
+                    width: 100%;
+                }
+            }
+        }
+        .popup-wrapper {
+            background-image: url(../images/default-images/illustration-5.png);
+            background-size: contain;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                background-image: url(../images/default-images/illustration-6.png);
+                background-repeat: no-repeat;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: inherit;
+            }
+        }
+    }
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+.popup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur($base);
+    opacity: 0;
+    transition: $transition;
+    z-index: 2;
+    &--active {
+        visibility: visible;
+        opacity: 1;
+        .popup-wrapper {
+            transform: translateY(0px);
+        }
+    }
+    &-wrapper {
+        background-repeat: no-repeat;
+        background-position: top right;
+        border-radius: $base*17.5;
+        background-size: contain;
+        background-size: 30% 100%;
+        background-color: $color-secondary-50;
+        border-radius: 70px;
+        z-index: 10;
+        transition: $transition;
+        transform: translateY(-$base*12.5);
+        padding: 80px;
+    }
+    &-inner {
+        position: relative;
+        margin: 0 auto;
+    }
+    &-btn {
+        margin: 0;
+        padding: 0;
+        background: none;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        font-size: $fs-xs;
+        line-height: $base*6.5;
+        font-weight: $fw-light;
+        letter-spacing: 0.02em;
+        text-decoration-line: underline;
+        position: absolute;
+        // top: 47px;
+        top: -10%;
+        // right: 372px;
+        right: 0;
+        transition: $transition;
+    }
+    &-title {
+        @include NextArt;
+        text-transform: uppercase;
+        font-weight: $fw-heavy;
+        font-size: $fs-l;
+        line-height: $base*8.5;
+        letter-spacing: 0.02em;
+        margin-bottom: $base*7.5;
+    }
+    &-tab {
+        display: inline-block;
+        text-align: center;
+        font-size: $fs-m;
+        line-height: $base*7.5;
+        font-weight: 500;
+        min-width: 200px;
+        position: relative;
+        cursor: pointer;
+        margin-bottom: $base*7.5;
+        &+& {
+            margin-left: $base*5;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            background: #94C6C4;
+            height: 2px;
+            width: 100%;
+            bottom: -6px;
+            left: 0;
+            right: 0;
+            transition: $transition;
+        }
+        // &--active {
+        //     &::before {
+        //         background: $color-primary-50;
+        //     }
+        // }
+        &__item {
+            display: flex;
+            max-width: 425px;
+            display: none;
+            // &:first-child {
+            //     display: block;
+            // }
+        }
+    }
+    // &-content {
+    //     padding: $base*20;
+    // }
+}
+
+.popup-tab__item {
+    display: none;
+    // &:first-child {
+    //     display: block;
+    // }
+}
+
+.popup-tab--active {
+    &::before {
+        background: $color-primary-50;
+    }
+}
+
+.popup-tab__content--active {
+    display: block;
+}
+
+.popup-input {
+    border: 1px solid $color-primary-400;
+    border-radius: 10px;
+    padding: $base*3 $base*5;
+    outline: none;
+    line-height: $base*6.5;
+    font-weight: $fw-light;
+    letter-spacing: 0.02em;
+    color: $color-secondary-200;
+    max-width: 200px;
+    transition: all .3s;
+    max-width: 200px;
+    width: 100%;
+    &+& {
+        margin-left: $base*5;
+    }
+    &:hover {
+        box-shadow: 0px $base/2 $base $color-primary-400;
+    }
+    // &:invalid {
+    //     border: 1px solid #FFA0A0;
+    // }
+}
+
+.popup__item {
+    &-personal {
+        &-age {
+            width: 100%;
+        }
+        &-date {
+            margin-bottom: $base*7.5;
+            &-item {
+                margin-bottom: $base*3.5;
+                .popup__item-personal-email.popup-input {
+                    max-width: 420px;
+                    width: 100%;
+                }
+                .popup__item-personal-money.popup-input {
+                    max-width: 420px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    &-privacy {
+        font-size: $fs-xs;
+        font-weight: $fw-light;
+        letter-spacing: 0.02em;
+        color: $color-secondary-200;
+        margin-bottom: $base*7.5;
+        & a {
+            display: inline;
+        }
+    }
+    &-chose {
+        margin-bottom: $base*3.5;
+    }
+    &-radio {
+        display: none;
+        &:checked+&-fake::before {
+            opacity: 1;
+        }
+        &-fake {
+            display: inline-block;
+            width: $base*3;
+            height: $base*3;
+            border-radius: 100%;
+            border: 1px solid $color-primary-50;
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                width: inherit;
+                height: inherit;
+                border-radius: inherit;
+                border: inherit;
+                filter: blur(0px);
+                top: -1px;
+                left: -1px;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                width: $base*1.5;
+                height: $base*1.5;
+                background-color: $color-primary-50;
+                border-radius: 100%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                transition: $transition;
+            }
+        }
+        &-text {
+            margin-left: $base*3.5;
+            font-weight: $fw-light;
+            letter-spacing: 0.02em;
+            line-height: $base*6.5;
+        }
+        &-box {
+            &+& {
+                margin-left: $base*16.75;
+            }
+        }
+    }
+}
+
+.select {
+    &-btn {
+        max-width: 420px;
+        width: 100%;
+        background: $color-white;
+        border: 1px solid $color-primary-400;
+        border-radius: $base*2.5;
+        padding: $base*3 $base*5;
+        outline: none;
+        line-height: $base*6.5;
+        font-weight: $fw-light;
+        letter-spacing: 0.02em;
+        color: $color-secondary-200;
+        transition: all .3s;
+        text-align: left;
+        margin-bottom: $base*3.5;
+        cursor: pointer;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            background-image: url(../images/icons/down-arrow.svg);
+            width: $base*2.5;
+            height: $base*1.5;
+            right: 24.5px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+            transition: $transition;
+        }
+        &:hover {
+            box-shadow: 0px $base/2 $base $color-primary-400;
+        }
+        &.select-btn--active {
+            &::after {
+                transform: rotate(180deg);
+                top: 44%;
+            }
+        }
+    }
+    &-wrapper {
+        position: relative;
+    }
+    &-list {
+        display: none;
+        z-index: 1;
+        position: absolute;
+        background: #FFFFFF;
+        border: 1px solid #FFECA0;
+        border-radius: $base*2.5;
+        width: 100%;
+        padding: $base*3 $base*5;
+        &--visible {
+            display: block;
+        }
+        &:hover {
+            box-shadow: 0px $base/2 $base $color-primary-400;
+        }
+        &__item {
+            line-height: $base*6.5;
+            font-weight: $fw-light;
+            letter-spacing: 0.02em;
+            cursor: pointer;
+            &+& {
+                padding-top: $base*3;
+            }
+        }
+    }
+    &-hidden {
+        display: none;
+    }
+}
+
+// === / FORM popup LESSON ====
+@import '_media';

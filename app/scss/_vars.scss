@@ -1,0 +1,56 @@
+// === BASE ===
+// === / BASE ===
+// === MIXIN ===
+@mixin Relawey {
+    font-family: 'Relawey', sans-serif;
+}
+
+@mixin NextArt {
+    font-family: 'NextArt', sans-serif;
+}
+
+@mixin Journalism {
+    font-family: 'Journalism', sans-serif;
+}
+
+@mixin Jost {
+    font-family: 'Jost', sans-serif;
+}
+
+// === /MIXIN ===
+// === ANIMATION ===
+$transition: 0.3s;
+// === / ANIMATION ===
+$base: 4px;
+// === COLOR ===
+// === PRIMARY-COLOR ===
+$color-primary-50: #236967;
+$color-primary-100: #FC8B4C;
+$color-primary-200: #FE7167;
+$color-primary-300: #FFCC1A;
+$color-primary-400: #FFECA0;
+// === / PRIMARY-COLOR ===
+// === SECONDARY ===
+$color-secondary-50: #FFFBED;
+$color-secondary-100: #FDE9D4;
+$color-secondary-200: #363636;
+$color-secondary-300: #61B5A9;
+// === / SECONDARY ===
+$color-white: #FFFFFF;
+$color-black: #000000;
+// === / COLOR ===
+// === FONT-SIZE ===
+$fs-xs: 14px;
+$fs-s: 16px;
+$fs-m: 18px;
+$fs-l: 24px;
+$fs-xxl: 50px;
+// === / FONT-SIZE ===
+// === FONT-WEIGHT ===
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-bold: 700;
+$fw-heavy: 900;
+// === / FONT-WEIGHT ===
+// $padding-vertical: $base * 30;
