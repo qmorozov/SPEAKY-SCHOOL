@@ -17,7 +17,21 @@
     font-family: 'Jost', sans-serif;
 }
 
-// === /MIXIN ===
+// === / MIXIN ===
+// === BREAKPOINT ===
+$breakpoint-x-min: 375px;
+$breakpoint-xs-max: $breakpoint-x-min - 1px;
+$breakpoint-sm-min: 576px;
+$breakpoint-xs-max: $breakpoint-sm-min - 1px;
+$breakpoint-md-min: 768px;
+$breakpoint-sm-max: $breakpoint-md-min - 1px;
+$breakpoint-lg-min: 992px;
+$breakpoint-md-max: $breakpoint-lg-min - 1px;
+$breakpoint-xl-min: 1070px;
+$breakpoint-lg-max: $breakpoint-xl-min - 1px;
+$breakpoint-xxl-min: 1400px;
+$breakpoint-xl-max: $breakpoint-xxl-min - 1px;
+// === / BREAKPOINT ===
 // === ANIMATION ===
 $transition: 0.3s;
 // === / ANIMATION ===
@@ -40,11 +54,13 @@ $color-white: #FFFFFF;
 $color-black: #000000;
 // === / COLOR ===
 // === FONT-SIZE ===
+$fs-x-small: 12px;
 $fs-xs: 14px;
 $fs-s: 16px;
 $fs-m: 18px;
 $fs-l: 24px;
 $fs-xxl: 50px;
+$fs-xxl-big: 90px;
 // === / FONT-SIZE ===
 // === FONT-WEIGHT ===
 $fw-light: 300;

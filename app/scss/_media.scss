@@ -1,2 +1,73 @@
 @import '_vars';
 @import '_fonts';
+@media (max-width: $breakpoint-md-min) {
+    // === FOOTER ====
+    .footer {
+        &__items {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        &__item {
+            &--logo {
+                order: -1;
+                margin-bottom: $base*12.5;
+            }
+            &--nav {
+                margin-bottom: $base*7.5;
+            }
+            &--contact {
+                text-align: center;
+            }
+        }
+    }
+    //=== / FOOTER ===
+}
+
+@media(max-width: $breakpoint-xs-max) {
+    // === GLOBAL ===
+    .btn {
+        font-size: $fs-s;
+    }
+    // === / GLOBAL ===
+    // === HEADER ===
+    // === / HEADER ===
+    // === FOOTER ====
+    .footer {
+        &__item {
+            &-title {
+                font-size: $fs-s;
+                line-height: 24px;
+                margin-bottom: $base*5;
+            }
+            &-list {
+                font-size: $fs-xs;
+                line-height: 22px;
+            }
+        }
+        &__inner {
+            padding: $base*15 0px $base*15 0px;
+            &-copyright {
+                font-size: $fs-x-small;
+                line-height: 24px;
+            }
+        }
+        &__copyright {
+            max-width: $base*34;
+        }
+    }
+    //=== / FOOTER ===
+}
+
+@media (max-width: $breakpoint-lg-max) {
+    // === HEADER ===
+    .header-navigation {
+        &--desktop {
+            display: none;
+        }
+        &--mobile {
+            display: block;
+        }
+    }
+    // === / HEADER ====
+}

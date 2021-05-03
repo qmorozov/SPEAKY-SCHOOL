@@ -132,8 +132,8 @@ document.querySelectorAll('.popup-content').forEach(function(popupContent) {
 // === / TABS ===
 
 // === SWIPER-SLIDER ===
-var menu = ['2016', '2017', '2018', '2019', '2020', '2021']
-var mySwiper = new Swiper('.swiper-container', {
+let menu = ['2016', '2017', '2018', '2019', '2020', '2021']
+let mySwiper = new Swiper('.swiper-container', {
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -143,3 +143,12 @@ var mySwiper = new Swiper('.swiper-container', {
     }
 });
 // === / SWIPER-SLIDER ===
+
+// === TOGGLE MENU ===
+const btn = document.querySelector('.btn-burger');
+const nav = document.querySelector('.header-navigation--mobile');
+btn.addEventListener('click', function() {
+    nav.classList.toggle('header-navigation--active');
+    console.log('HELLO');
+});
+// === /TOGGLE MENU ===
