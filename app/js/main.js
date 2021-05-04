@@ -147,8 +147,42 @@ let mySwiper = new Swiper('.swiper-container', {
 // === TOGGLE MENU ===
 const btn = document.querySelector('.btn-burger');
 const nav = document.querySelector('.header-navigation--mobile');
-btn.addEventListener('click', function() {
+const mainNavigation = document.getElementById('main-navigation');
+const headerSection = document.querySelector('.section-header');
+btn.addEventListener('click', function(event) {
     nav.classList.toggle('header-navigation--active');
-    console.log('HELLO');
+    headerSection.classList.toggle('section-header--active');
+    if (nav.classList.contains('header-navigation--active') || headerSection.classList.contains('section-header--active')) {
+        hideScroll();
+    } else {
+        displayScroll();
+    }
 });
+const hideScroll = () => {
+    const scrollWidth = `${getScrollbarWidth()}px`;
+    document.body.style.paddingRight = scrollWidth;
+    document.body.style.overflow = 'hidden';
+    mainNavigation.style.paddingRight = scrollWidth;
+};
+
+const displayScroll = () => {
+    document.body.style.paddingRight = '';
+    document.body.style.overflow = 'visible';
+    mainNavigation.style.paddingRight = '';
+};
+
+const getScrollbarWidth = () => {
+    const outer = document.createElement('div');
+    outer.style.position = 'absolute';
+    outer.style.top = '-9999px';
+    outer.style.width = '50px';
+    outer.style.height = '50px';
+    outer.style.overflow = 'scroll';
+    outer.style.visibility = 'hidden';
+    document.body.appendChild(outer);
+    const ScrollBarWidth = outer.offsetWidth - outer.clientWidth;
+    document.body.removeChild(outer);
+    return ScrollBarWidth;
+};
+
 // === /TOGGLE MENU ===
