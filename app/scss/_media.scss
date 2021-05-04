@@ -19,6 +19,64 @@
     .intro-info__title {
         margin-bottom: 20px;
     }
+    .popup--trial {
+        .popup {
+            &-wrapper {
+                background-image: url(../images/default-images/illustration-10.png);
+                bottom: 0;
+                background-position: bottom;
+                padding: 65px 20px;
+                max-width: 375px;
+                margin: 0 auto;
+                height: 876px;
+            }
+            &-btn {
+                top: -5%;
+                right: 10px;
+            }
+            &-title {
+                max-width: 212px;
+                font-size: 20px;
+                line-height: 28px;
+            }
+            &-tab {
+                min-width: 160px;
+            }
+            &-input {
+                max-width: 158px;
+            }
+        }
+        .popup-tab+.popup-tab {
+            margin-left: 10px;
+        }
+        &__item {
+            &-radio-text {
+                line-height: 22px;
+            }
+            &-chose {
+                margin-bottom: 12px;
+            }
+            &-personal {
+                &-date {
+                    margin-bottom: 28px;
+                    &-item {
+                        margin-bottom: 12px;
+                    }
+                }
+            }
+        }
+        .popup__item-radio-box+.popup__item-radio-box {
+            margin-left: 20px;
+        }
+        .popup-input+.popup-input {
+            margin-left: 14px;
+        }
+        .btn {
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+        }
+    }
 }
 
 @media (max-width: 900px) {
@@ -78,6 +136,54 @@
         font-size: 50px;
         line-height: 70px;
     }
+    // === POPUP PAYMENT ===
+    .popup--payment {
+        .popup-wrapper {
+            padding: 65px 20px;
+            max-width: 375px;
+            margin: 0 auto;
+            height: 783px;
+            background-image: none;
+            &::before {
+                background-image: url(../images/default-images/illustration-9.png);
+                bottom: 0;
+                background-position: bottom;
+            }
+            .btn {
+                font-size: 16px;
+                line-height: 18px;
+                display: flex;
+                justify-content: center;
+                margin: 0 auto;
+            }
+        }
+    }
+    .popup {
+        &-title {
+            font-size: 20px;
+            line-height: 28px;
+        }
+        &-input {
+            max-width: 158px;
+            &+& {
+                margin-left: 14px;
+            }
+        }
+        &__item {
+            &-personal {
+                &-date {
+                    margin-bottom: 20px;
+                    &-item {
+                        margin-bottom: 12px;
+                    }
+                }
+            }
+            &-privacy {
+                font-size: 12px;
+                line-height: 20px;
+            }
+        }
+    }
 }
 
 @media(max-width: 700px) {
@@ -108,6 +214,34 @@
         }
         &__copyright {
             max-width: $base*34;
+        }
+    }
+    .popup--call {
+        .popup {
+            &-wrapper {
+                background-image: url(../images/default-images/illustration-11.png);
+                bottom: 0;
+                background-position: bottom;
+                padding: 65px 20px;
+                max-width: 375px;
+                margin: 0 auto;
+                height: 650px;
+                &::before {
+                    background-image: none;
+                }
+            }
+            &-title {
+                font-size: 20px;
+                line-height: 28px;
+            }
+            &__item-personal-date {
+                margin-bottom: 30px;
+            }
+        }
+        .btn {
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
         }
     }
 }

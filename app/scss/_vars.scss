@@ -18,20 +18,6 @@
 }
 
 // === / MIXIN ===
-// === BREAKPOINT ===
-$breakpoint-x-min: 375px;
-$breakpoint-xs-max: $breakpoint-x-min - 1px;
-$breakpoint-sm-min: 576px;
-$breakpoint-xs-max: $breakpoint-sm-min - 1px;
-$breakpoint-md-min: 768px;
-$breakpoint-sm-max: $breakpoint-md-min - 1px;
-$breakpoint-lg-min: 992px;
-$breakpoint-md-max: $breakpoint-lg-min - 1px;
-$breakpoint-xl-min: 1070px;
-$breakpoint-lg-max: $breakpoint-xl-min - 1px;
-$breakpoint-xxl-min: 1400px;
-$breakpoint-xl-max: $breakpoint-xxl-min - 1px;
-// === / BREAKPOINT ===
 // === ANIMATION ===
 $transition: 0.3s;
 // === / ANIMATION ===
