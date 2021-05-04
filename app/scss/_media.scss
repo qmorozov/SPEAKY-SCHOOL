@@ -1,6 +1,42 @@
 @import '_vars';
 @import '_fonts';
-@media (max-width: $breakpoint-md-min) {
+@media (max-width: 1070px) {
+    // === HEADER ===
+    .header-navigation {
+        &--desktop {
+            display: none;
+        }
+        &--mobile {
+            display: block;
+        }
+    }
+    // === GLOBAL ===
+    h1 {
+        font-size: 40px;
+        line-height: 55px;
+    }
+    // === INTRO ===
+    .intro-info__title {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    // === INTRO ===
+    .intro-info__title {
+        margin-top: 50px;
+    }
+    h1 {
+        font-size: 30px;
+        line-height: 45px;
+    }
+    .btn {
+        font-size: 15px;
+        padding: 15px 30px;
+    }
+}
+
+@media (max-width: 760px) {
     // === FOOTER ====
     .footer {
         &__items {
@@ -21,17 +57,35 @@
             }
         }
     }
-    //=== / FOOTER ===
+    // === INTRO ===
+    .intro {
+        &__content {
+            flex-direction: column;
+        }
+        &-info {
+            margin-right: 0px;
+            margin-bottom: 60px;
+            &__title {
+                margin-bottom: 40px;
+            }
+        }
+        &-images img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+    h1 {
+        font-size: 50px;
+        line-height: 70px;
+    }
 }
 
-@media(max-width: $breakpoint-xs-max) {
+@media(max-width: 700px) {
     // === GLOBAL ===
     .btn {
         font-size: $fs-s;
     }
-    // === / GLOBAL ===
     // === HEADER ===
-    // === / HEADER ===
     // === FOOTER ====
     .footer {
         &__item {
@@ -56,18 +110,20 @@
             max-width: $base*34;
         }
     }
-    //=== / FOOTER ===
 }
 
-@media (max-width: $breakpoint-lg-max) {
-    // === HEADER ===
-    .header-navigation {
-        &--desktop {
-            display: none;
-        }
-        &--mobile {
-            display: block;
-        }
+@media (max-width: 500px) {
+    // === INTRO ===
+    h1 {
+        font-size: 40px;
+        line-height: 55px;
     }
-    // === / HEADER ====
+}
+
+@media (max-width: 400px) {
+    // === INTRO ===
+    h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
 }

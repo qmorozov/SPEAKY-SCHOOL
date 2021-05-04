@@ -290,12 +290,25 @@
 .intro {
     &__content {
         display: flex;
+        justify-content: space-between;
     }
     &-info {
+        flex-basis: 55%;
+        margin-right: 35px;
         &__title {
             text-transform: uppercase;
             margin-bottom: $base*10;
             margin-top: $base*17.5;
+        }
+    }
+    &-images {
+        flex-basis: 45%;
+        img {
+            width: 100%;
+            height: 100%;
+            max-width: 560px;
+            max-height: 560px;
+            object-fit: contain;
         }
     }
 }
