@@ -77,6 +77,23 @@
             margin: 0 auto;
         }
     }
+    // === LANGUAGES ===
+    .languages {
+        &-wrapper {
+            padding: 70px 50px 70px;
+        }
+        &-top {
+            margin-bottom: 20px;
+        }
+        &-item {
+            &-text {
+                margin-left: 20px;
+            }
+            &+& {
+                margin-left: 30px;
+            }
+        }
+    }
 }
 
 @media (max-width: 900px) {
@@ -91,6 +108,24 @@
     .btn {
         font-size: 15px;
         padding: 15px 30px;
+    }
+    // === LANGUAGES ===
+    .languages {
+        &-items {
+            flex-basis: 50%;
+        }
+        &-item {
+            &+& {
+                margin-left: 0px;
+            }
+            &:nth-child(n+1) {
+                flex-basis: 50%;
+            }
+            &:nth-child(n+3) {
+                margin-top: 30px;
+                flex-basis: 50%;
+            }
+        }
     }
 }
 
@@ -244,9 +279,59 @@
             margin: 0 auto;
         }
     }
+    // === ASSIGNEMENT ===
+    .assignment.section-outer {
+        padding-top: $base*20;
+        padding-bottom: $base*20;
+    }
+}
+
+@media (max-width: 600px) {
+    // === ASSIGNEMENT ===
+    .assignment {
+        &-items {
+            flex-direction: column;
+        }
+        &-item {
+            &+& {
+                margin-top: 60px;
+                margin-left: 0px;
+            }
+        }
+    }
 }
 
 @media (max-width: 500px) {
+    // === LANGUAGES ===
+    .languages {
+        &-items {
+            justify-content: space-between;
+            flex-direction: column;
+        }
+        .title {
+            font-size: 20px;
+            line-height: 28px;
+            margin-bottom: 40px;
+        }
+        &-item {
+            max-width: 170px;
+            width: 100%;
+            img {
+                margin-right: auto;
+            }
+            //  margin-bottom: 30px;
+            &+& {
+                margin-top: 30px;
+                margin-left: 0;
+            }
+            &-text {
+                margin-left: 30px;
+            }
+        }
+        &-wrapper {
+            border-radius: 50px;
+        }
+    }
     // === INTRO ===
     h1 {
         font-size: 40px;
@@ -259,5 +344,29 @@
     h1 {
         font-size: 30px;
         line-height: 40px;
+    }
+    // === LANGUAGES ===
+    .languages {
+        .title {
+            font-size: 20px;
+            line-height: 28px;
+        }
+    }
+    // === ASSIGNEMENT ===
+    .assignment {
+        &-item__text span {
+            font-size: 20px;
+            line-height: 28px;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    // === LANGUAGES ===
+    .languages {
+        .title {
+            font-size: 16px;
+            line-height: 20px;
+        }
     }
 }

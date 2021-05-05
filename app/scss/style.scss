@@ -294,7 +294,7 @@
     }
     &-info {
         flex-basis: 55%;
-        margin-right: 35px;
+        margin-right: $base*8.75;
         &__title {
             text-transform: uppercase;
             margin-bottom: $base*10;
@@ -361,15 +361,16 @@
     &-wrapper {
         background-color: $color-secondary-50;
         border-radius: $base*17.5;
-        padding: $base*18.75 $base*53.25 $base*21.25;
+        // padding: $base*18.75 $base*53.25 $base*21.25;
+        padding: $base*18.75 $base*22.5 $base*21.25;
     }
     &-top {
         margin-bottom: $base*10;
     }
     &-title {
-        // &.title:before {
-        //     width: 115%;
-        // }
+        &.title {
+            text-transform: none;
+        }
     }
     &-items {
         display: flex;
@@ -385,9 +386,10 @@
         &-images img {
             border-radius: 100%;
             max-width: $base*10;
+            min-width: $base*10;
             width: 100%;
             max-height: $base*10;
-            height: 100%;
+            //height: 100%;
             object-fit: cover;
         }
         &-text {

@@ -95,27 +95,67 @@ h1 {
 }
 
 .title {
-    display: inline-block;
     @include NextArt;
     font-size: $fs-l;
     font-weight: $fw-heavy;
     line-height: $base*8.5;
-    position: relative;
-    //   z-index: 100;
-    text-transform: uppercase;
     letter-spacing: 0.02em;
     margin-bottom: $base*7.5;
-    &:before {
-        content: "";
-        position: absolute;
-        background-color: $color-primary-400;
-        height: $base*2.5;
-        width: 100%;
-        z-index: -1;
-        top: 50%;
+    text-transform: uppercase;
+    span {
+        background: linear-gradient(to top, $color-primary-400 0%, $color-primary-400 40%, transparent 40%);
     }
 }
 
+// .title {
+//     @include NextArt;
+//     font-size: $fs-l;
+//     font-weight: $fw-heavy;
+//     line-height: $base*8.5;
+//     position: relative;
+//     z-index: 5;
+//     text-transform: uppercase;
+//     letter-spacing: 0.02em;
+//     margin-bottom: $base*7.5;
+//     &::before,
+//     &::after {
+//         content: "";
+//         position: absolute;
+//         left: 0;
+//         display: inline-block;
+//         width: 100%;
+//         height: $base*2.5;
+//         z-index: -1;
+//         background-color: $color-primary-400;
+//     }
+//     &::before {
+//         top: 20%;
+//     }
+//     &::after {
+//         top: 70%;
+//     }
+// }
+// .title {
+//     display: inline-block;
+//     @include NextArt;
+//     font-size: $fs-l;
+//     font-weight: $fw-heavy;
+//     line-height: $base*8.5;
+//     position: relative;
+//     z-index: 100;
+//     text-transform: uppercase;
+//     letter-spacing: 0.02em;
+//     margin-bottom: $base*7.5;
+//     &:before {
+//         content: "";
+//         position: absolute;
+//         background-color: $color-primary-400;
+//         height: $base*2.5;
+//         width: 100%;
+//         z-index: -1;
+//         top: 50%;
+//     }
+// }
 // === FORM POPUP LESSON ====
 .popup {
     &--trial {
