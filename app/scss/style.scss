@@ -313,6 +313,16 @@
     }
 }
 
+.intro-children-online {
+    .intro-info__title {
+        max-width: 560px;
+    }
+}
+
+.intro-children-online.section-outer {
+    padding-bottom: $base*35;
+}
+
 // === / INTRO ===
 // === ASSIGNEMENT ===
 .assignment.section-outer {
@@ -872,6 +882,98 @@
 }
 
 // === / HISTORY ===
+// === CHOOSE ===
+.choose {
+    &__top {
+        margin-bottom: $base*7.5;
+    }
+    &__items {
+        display: flex;
+        align-items: center;
+    }
+    &__item {
+        span {
+            text-transform: uppercase;
+        }
+        &:nth-child(n+2) {
+            padding-left: $base*5;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                width: 6px;
+                height: 100%;
+                left: 0;
+                top: 0;
+                background-color: #FDD503;
+            }
+        }
+        &:nth-child(n+3) {
+            margin-left: $base*16.25;
+            &::before {
+                background-color: #FE7167;
+            }
+        }
+        &:first-child {
+            font-weight: $fw-medium;
+            font-size: $fs-m;
+            line-height: 30px;
+            margin-right: $base*21.25;
+        }
+    }
+}
+
+// === / CHOOSE ===
+// === TRUST ===
+.trust {
+    &-wrapper {
+        background: #FFFBED;
+        border-radius: 70px;
+        padding: $base*16.75 $base*16.75;
+    }
+    &-content {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    &-info {
+        max-width: $base*83.5;
+        width: 100%;
+        // margin-right: $base*45.25;
+        &__title {
+            margin-bottom: $base*10;
+        }
+    }
+    &-photo {
+        max-width: $base*71.5;
+        width: 100%;
+        &__inner {
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: relative;
+            height: $base*71.5;
+            img {
+                position: absolute;
+                top: $base*8;
+                left: $base*7.5;
+                border: 3px solid #FDD503;
+                max-width: $base*56.25;
+                width: 100%;
+                max-height: $base*56.25;
+                height: 100%;
+                object-fit: cover;
+                border-bottom-right-radius: 100%;
+                border-bottom-left-radius: 100%;
+            }
+        }
+    }
+    .title {
+        font-size: 30px;
+        line-height: 44px;
+    }
+}
+
+// === / TRUST ===
 // === FOOTER ===
 .footer {
     background-color: $color-secondary-50;
