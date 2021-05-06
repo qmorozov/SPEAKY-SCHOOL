@@ -188,6 +188,24 @@
             }
         }
     }
+    // === FOREIGN ===
+    .foreign {
+        &-wrapper {
+            flex-direction: column;
+            align-items: center;
+        }
+        &-photo {
+            margin-right: 0px;
+            order: 0;
+        }
+        &-info {
+            order: -1;
+            margin-bottom: 60px;
+            &__item {
+                margin-right: 39px;
+            }
+        }
+    }
 }
 
 @media (min-width: 900px) {
@@ -463,6 +481,22 @@
             line-height: 28px;
         }
     }
+    // === FOREIGN ===
+    .foreign {
+        .title {
+            font-size: 20px;
+            line-height: 28px;
+        }
+        &-info {
+            &__item {
+                margin-bottom: 30px;
+                &-text {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 375px) {
@@ -478,6 +512,13 @@
         .title {
             font-size: 20px;
             line-height: 28px;
+        }
+    }
+    // === FOREIGN ===
+    .foreign {
+        &-photo__inner img {
+            top: 13px;
+            left: 5px;
         }
     }
 }

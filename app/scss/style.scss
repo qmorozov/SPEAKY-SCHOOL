@@ -1019,8 +1019,125 @@
     }
 }
 
-///////////////////
 // === / RESULT ===
+// === FOREIGN-LANGUAGES ===
+.foreign {
+    &-wrapper {
+        display: flex;
+    }
+}
+
+.foreign-photo {
+    max-width: $base*88.25;
+    width: 100%;
+    margin-right: $base*18.25;
+    &__inner {
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: relative;
+        height: $base*75;
+        img {
+            position: absolute;
+            top: $base*8.25;
+            left: $base*6.75;
+            border: 3px solid $color-secondary-50;
+            max-width: $base*65;
+            width: 100%;
+            max-height: $base*65;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 100%;
+            border-top-left-radius: 0;
+        }
+    }
+}
+
+.foreign-info {
+    &__title {
+        max-width: $base*86.75;
+        margin-bottom: $base*10;
+    }
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item {
+        margin-right: $base*25;
+        margin-bottom: $base*8.5;
+        padding-top: $base*7.5;
+        position: relative;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            top: 12%;
+            left: $base*5;
+            border-top: dashed $base/2;
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: $base*4;
+            height: $base*4;
+            border-radius: 100%;
+        }
+        &-text {
+            font-weight: $fw-medium;
+            font-size: $fs-m;
+            line-height: 30px;
+            color: $color-secondary-200;
+        }
+        &--green {
+            max-width: $base*16.5;
+            &::before {
+                border-top-color: #236967;
+            }
+            &::after {
+                background-color: #236967;
+            }
+        }
+        &--red {
+            max-width: $base*39.5;
+            &::before {
+                border-top-color: #FE7167;
+            }
+            &::after {
+                background-color: #FE7167;
+            }
+        }
+        &--orange {
+            max-width: $base*47.75;
+            &::before {
+                border-top-color: #FC8B4C;
+            }
+            &::after {
+                background-color: #FC8B4C;
+            }
+        }
+        &--yellow {
+            max-width: $base*36;
+            &::before {
+                border-top-color: #FDD503;
+            }
+            &::after {
+                background-color: #FDD503;
+            }
+        }
+        &--blue {
+            max-width: $base*61.25;
+            &::before {
+                border-top-color: #038192;
+            }
+            &::after {
+                background-color: #038192;
+            }
+        }
+    }
+}
+
+// === / FOREIGN-LANGUAGES ===
 // === FOOTER ===
 .footer {
     background-color: $color-secondary-50;
