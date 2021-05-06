@@ -133,7 +133,7 @@ document.querySelectorAll('.popup-content').forEach(function(popupContent) {
 
 // === SWIPER-SLIDER ===
 let menu = ['2016', '2017', '2018', '2019', '2020', '2021']
-let mySwiper = new Swiper('.swiper-container', {
+let mySwiper = new Swiper('.history__slider-container', {
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -186,3 +186,30 @@ const getScrollbarWidth = () => {
 };
 
 // === /TOGGLE MENU ===
+
+// === RESULT SECTION ===
+(function() {
+    'use strict';
+    const breakpoint = window.matchMedia('(min-width:900px)');
+    let mySwiper;
+    const breakpointChecker = function() {
+        if (breakpoint.matches === true) {
+            if (mySwiper !== undefined) mySwiper.destroy(true, true);
+            return;
+        } else if (breakpoint.matches === false) {
+            return enableSwiper();
+        }
+    };
+    const enableSwiper = function() {
+        mySwiper = new Swiper('.result-container', {
+            slidesPerView: '2',
+            spaceBetween: 30,
+            centeredSlides: true,
+            a11y: true,
+
+        });
+    };
+    breakpoint.addListener(breakpointChecker);
+    breakpointChecker();
+})();
+// === / RESULT SECTION ===

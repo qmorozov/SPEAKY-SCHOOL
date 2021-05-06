@@ -974,6 +974,53 @@
 }
 
 // === / TRUST ===
+// === RESULT ===
+.result {
+    .title {
+        text-align: center;
+    }
+    &-top {
+        margin-bottom: $base*10;
+    }
+}
+
+.result-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.result-slide {
+    padding: $base*7 $base*9.25;
+    background: $color-secondary-50;
+    border-radius: $base*7.5;
+    max-width: $base*66;
+    width: 100%;
+    min-height: $base*36;
+    height: 100%;
+    margin-right: $base*7.25;
+    margin-bottom: $base*10;
+    &__content {}
+    &__img {
+        margin-bottom: $base*6.5;
+        img {
+            border-radius: 100%;
+            max-width: $base*10;
+            min-width: $base*10;
+            width: 100%;
+            max-height: $base*10;
+            -o-object-fit: cover;
+            object-fit: cover;
+        }
+    }
+    &__info {
+        font-weight: $fw-light;
+        line-height: 26px;
+        color: $color-secondary-200;
+    }
+}
+
+///////////////////
+// === / RESULT ===
 // === FOOTER ===
 .footer {
     background-color: $color-secondary-50;

@@ -167,6 +167,37 @@
             //  justify-content: space-between;
         }
     }
+    // === RESULT ===
+    .result {
+        .title {
+            font-size: 20px;
+            line-height: 28px;
+            text-align: left;
+            max-width: 233px;
+        }
+        &-wrapper {
+            flex-wrap: nowrap;
+        }
+        &-slide {
+            //  padding: 28px 28px;
+            margin-bottom: 0px;
+            max-width: 200px;
+            &__info {
+                font-size: 14px;
+                line-height: 22px;
+            }
+        }
+    }
+}
+
+@media (min-width: 900px) {
+    .result-wrapper {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .result-slide {
+        width: 50%;
+    }
 }
 
 @media (max-width: 760px) {
