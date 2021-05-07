@@ -101,30 +101,30 @@ const getScrollBarWidth = () => {
 // === / POPUP ===
 
 // === TABS ===
-document.querySelectorAll('.popup-content').forEach(function(popupContent) {
+document.querySelectorAll('.tab-content').forEach(function(tabContent) {
 
-    const tabsBtn = popupContent.querySelectorAll('.popup-tab');
-    const tabsItems = popupContent.querySelectorAll('.popup-tab__item');
+    const tabsBtn = tabContent.querySelectorAll('.tab-list');
+    const tabsItems = tabContent.querySelectorAll('.tab-item');
 
     tabsBtn.forEach(onTabClick);
 
-    document.querySelector('.popup-tab').click();
+    document.querySelector('.tab-list').click();
 
     function onTabClick(item) {
         item.addEventListener('click', function() {
             let currentBtn = item;
             let tabId = currentBtn.getAttribute("data-tab");
-            let currentTab = popupContent.querySelector(tabId);
-            if (!currentBtn.classList.contains('popup-tab--active')) {
+            let currentTab = tabContent.querySelector(tabId);
+            if (!currentBtn.classList.contains('tab--active')) {
                 tabsBtn.forEach(function(item) {
-                    item.classList.remove('popup-tab--active');
+                    item.classList.remove('tab--active');
                 });
                 tabsItems.forEach(function(item) {
-                    item.classList.remove('popup-tab__content--active');
+                    item.classList.remove('tab-content--active');
                 });
             }
-            currentBtn.classList.add('popup-tab--active');
-            currentTab.classList.add('popup-tab__content--active');
+            currentBtn.classList.add('tab--active');
+            currentTab.classList.add('tab-content--active');
         });
     };
 });

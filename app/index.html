@@ -21,15 +21,15 @@
             <div class="popup-wrapper">
                 <div class="popup-inner">
                     <button class="popup-btn js-modal-close">Закрыть</button>
-                    <div class="popup-content">
-                        <div class="popup-title">Записаться на пробное занятие</div>
+                    <div class="tab-content">
+                        <div class="popup-title tab-title">Записаться на пробное занятие</div>
                         <div class="popup-tab__wrapper tab-wrapper">
-                            <div class="popup-tabs">
-                                <span class="popup-tab popup-tab--active" data-tab="#tab_1">Взрослые</span>
-                                <span class="popup-tab" data-tab="#tab_2">Дети и подростки</span>
+                            <div class="tab-items">
+                                <span class="tab-list tab--active" data-tab="#tab_1">Взрослые</span>
+                                <span class="tab-list" data-tab="#tab_2">Дети и подростки</span>
                             </div>
                             <div class="popup-tab__content">
-                                <div class="popup-tab__item popup-tab__content--active" id="tab_1">
+                                <div class="tab-item tab-content--active" id="tab_1">
                                     <div class="popup__item-info">
                                         <form class="popup__item-form">
                                             <div class="popup__select">
@@ -75,7 +75,7 @@
                                         </form>
                                     </div>
                                 </div>
-                                <div class="popup-tab__item" id="tab_2">
+                                <div class="tab-item" id="tab_2">
                                     <form class="popup__item-form">
                                         <div class="popup__select">
                                             <div class="select-wrapper">
@@ -137,7 +137,7 @@
             <div class="popup-wrapper">
                 <div class="popup-inner">
                     <button class="popup-btn js-modal-close">Закрыть</button>
-                    <div class="popup-content">
+                    <div class="tab-content">
                         <div class="popup-title">Оплата услуг</div>
                         <form class="popup__item-form">
                             <div class="popup__item-personal-date">
@@ -171,7 +171,7 @@
             <div class="popup-wrapper">
                 <div class="popup-inner">
                     <button class="popup-btn js-modal-close">Закрыть</button>
-                    <div class="popup-content">
+                    <div class="tab-content">
                         <div class="popup-title">Заказать звонок</div>
                         <form class="popup__item-form">
                             <div class="popup__item-personal-date">
@@ -504,15 +504,15 @@
         <div class="section-inner popup--trial">
             <div class="popup-wrapper">
                 <div class="popup-inner">
-                    <div class="popup-content">
-                        <div class="popup-title">Записаться на пробное занятие</div>
+                    <div class="tab-content">
+                        <div class="popup-title tab-title">Записаться на пробное занятие</div>
                         <div class="popup-tab__wrapper tab-wrapper">
-                            <div class="popup-tabs">
-                                <span class="popup-tab popup-tab--active" data-tab="#tab_1">Взрослые</span>
-                                <span class="popup-tab" data-tab="#tab_2">Дети и подростки</span>
+                            <div class="tab-items">
+                                <span class="tab-list tab--active" data-tab="#tab_1">Взрослые</span>
+                                <span class="tab-list" data-tab="#tab_2">Дети и подростки</span>
                             </div>
                             <div class="popup-tab__content">
-                                <div class="popup-tab__item popup-tab__content--active" id="tab_1">
+                                <div class="tab-item tab-content--active" id="tab_1">
                                     <div class="popup__item-info">
                                         <form class="popup__item-form">
                                             <div class="popup__select">
@@ -558,7 +558,7 @@
                                         </form>
                                     </div>
                                 </div>
-                                <div class="popup-tab__item" id="tab_2">
+                                <div class="tab-item" id="tab_2">
                                     <form class="popup__item-form">
                                         <div class="popup__select">
                                             <div class="select-wrapper">
@@ -791,15 +791,15 @@
         <div class="section-inner popup--trial">
             <div class="popup-wrapper">
                 <div class="popup-inner">
-                    <div class="popup-content">
-                        <div class="popup-title">Записаться на пробное занятие</div>
+                    <div class="tab-content">
+                        <div class="popup-title tab-title">Записаться на пробное занятие</div>
                         <div class="popup-tab__wrapper tab-wrapper">
-                            <div class="popup-tabs">
-                                <span class="popup-tab popup-tab--active" data-tab="#tab_1">Взрослые</span>
-                                <span class="popup-tab" data-tab="#tab_2">Дети и подростки</span>
+                            <div class="tab-items">
+                                <span class="tab-list tab--active" data-tab="#tab_1">Взрослые</span>
+                                <span class="tab-list" data-tab="#tab_2">Дети и подростки</span>
                             </div>
                             <div class="popup-tab__content">
-                                <div class="popup-tab__item popup-tab__content--active" id="tab_1">
+                                <div class="tab-item tab-content--active" id="tab_1">
                                     <div class="popup__item-info">
                                         <form class="popup__item-form">
                                             <div class="popup__select">
@@ -821,13 +821,13 @@
                                             <div class="popup__item-chose">
                                                 <label for="online-old" class="popup__item-radio-online popup__item-radio-box">
                                                     <input type="radio" id="online-old" class="popup__item-radio"
-                                                        name="popup__item-radio" checked>
+                                                        name="section__item-radio" checked>
                                                     <span class="popup__item-radio-fake"></span>
                                                     <span class="popup__item-radio-text">Онлайн-занятия</span>
                                                 </label>
                                                 <label for="offline-old" class="popup__item-radio-offline popup__item-radio-box">
                                                     <input type="radio" id="offline-old" class="popup__item-radio"
-                                                        name="popup__item-radio">
+                                                        name="section__item-radio">
                                                     <span class="popup__item-radio-fake"></span>
                                                     <span class="popup__item-radio-text">Занятия в клубе</span>
                                                 </label>
@@ -845,7 +845,7 @@
                                         </form>
                                     </div>
                                 </div>
-                                <div class="popup-tab__item" id="tab_2">
+                                <div class="tab-item" id="tab_2">
                                     <form class="popup__item-form">
                                         <div class="popup__select">
                                             <div class="select-wrapper">
@@ -865,13 +865,13 @@
                                         <div class="popup__item-chose">
                                             <label for="online-child" class="popup__item-radio-online popup__item-radio-box">
                                                 <input type="radio" id="online-child" class="popup__item-radio"
-                                                    name="popup__item-radio" checked>
+                                                    name="popup__item-radio-online" checked>
                                                 <span class="popup__item-radio-fake"></span>
                                                 <span class="popup__item-radio-text">Онлайн-занятия</span>
                                             </label>
                                             <label for="offline-child" class="popup__item-radio-offline popup__item-radio-box">
                                                 <input type="radio" id="offline-child" class="popup__item-radio"
-                                                    name="popup__item-radio">
+                                                    name="popup__item-radio-offline">
                                                 <span class="popup__item-radio-fake"></span>
                                                 <span class="popup__item-radio-text">Занятия в клубе</span>
                                             </label>

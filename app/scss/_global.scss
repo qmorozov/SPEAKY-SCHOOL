@@ -107,55 +107,6 @@ h1 {
     }
 }
 
-// .title {
-//     @include NextArt;
-//     font-size: $fs-l;
-//     font-weight: $fw-heavy;
-//     line-height: $base*8.5;
-//     position: relative;
-//     z-index: 5;
-//     text-transform: uppercase;
-//     letter-spacing: 0.02em;
-//     margin-bottom: $base*7.5;
-//     &::before,
-//     &::after {
-//         content: "";
-//         position: absolute;
-//         left: 0;
-//         display: inline-block;
-//         width: 100%;
-//         height: $base*2.5;
-//         z-index: -1;
-//         background-color: $color-primary-400;
-//     }
-//     &::before {
-//         top: 20%;
-//     }
-//     &::after {
-//         top: 70%;
-//     }
-// }
-// .title {
-//     display: inline-block;
-//     @include NextArt;
-//     font-size: $fs-l;
-//     font-weight: $fw-heavy;
-//     line-height: $base*8.5;
-//     position: relative;
-//     z-index: 100;
-//     text-transform: uppercase;
-//     letter-spacing: 0.02em;
-//     margin-bottom: $base*7.5;
-//     &:before {
-//         content: "";
-//         position: absolute;
-//         background-color: $color-primary-400;
-//         height: $base*2.5;
-//         width: 100%;
-//         z-index: -1;
-//         top: 50%;
-//     }
-// }
 // === FORM POPUP LESSON ====
 .popup {
     &--trial {
@@ -301,63 +252,64 @@ input[type="number"]::-webkit-inner-spin-button {
         letter-spacing: 0.02em;
         margin-bottom: $base*7.5;
     }
-    &-tab {
-        display: inline-block;
-        text-align: center;
-        font-size: $fs-m;
-        line-height: $base*7.5;
-        font-weight: 500;
-        min-width: 200px;
-        position: relative;
-        cursor: pointer;
-        margin-bottom: $base*7.5;
-        &+& {
-            margin-left: $base*5;
-        }
-        &::before {
-            content: "";
-            position: absolute;
-            background: #94C6C4;
-            height: 2px;
-            width: 100%;
-            bottom: -6px;
-            left: 0;
-            right: 0;
-            transition: $transition;
-        }
-        // &--active {
-        //     &::before {
-        //         background: $color-primary-50;
-        //     }
-        // }
-        &__item {
-            display: flex;
-            max-width: 425px;
-            display: none;
-            // &:first-child {
-            //     display: block;
-            // }
-        }
-    }
     // &-content {
     //     padding: $base*20;
     // }
 }
 
-.popup-tab__item {
+.tab-list {
+    display: inline-block;
+    text-align: center;
+    font-size: $fs-m;
+    line-height: $base*7.5;
+    font-weight: 500;
+    min-width: 200px;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: $base*7.5;
+    &+& {
+        margin-left: $base*5;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        background: #94C6C4;
+        height: 2px;
+        width: 100%;
+        bottom: -6px;
+        left: 0;
+        right: 0;
+        transition: $transition;
+    }
+    // &--active {
+    //     &::before {
+    //         background: $color-primary-50;
+    //     }
+    // }
+    &__item {
+        display: flex;
+        max-width: 425px;
+        display: none;
+        // &:first-child {
+        //     display: block;
+        // }
+    }
+}
+
+.tab-item {
     display: none;
     // &:first-child {
     //     display: block;
     // }
 }
 
-.popup-tab--active {
+.tab--active {
     &::before {
         background: $color-primary-50;
     }
 }
 
-.popup-tab__content--active {
+.tab-content--active {
     display: block;
 }
 

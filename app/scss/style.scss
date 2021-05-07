@@ -1138,6 +1138,18 @@
 }
 
 // === / FOREIGN-LANGUAGES ===
+// === PACKAGES ===
+.packages {
+    &-wrapper {}
+    &-top {
+        margin-bottom: $base*10;
+    }
+    &-title {
+        text-align: center;
+    }
+}
+
+// === / PACKAGES ===
 // === FOOTER ===
 .footer {
     background-color: $color-secondary-50;
