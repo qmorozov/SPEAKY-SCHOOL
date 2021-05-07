@@ -287,6 +287,10 @@
     padding-bottom: $base*5;
 }
 
+.intro--offline.intro.section-outer {
+    padding-bottom: $base*35;
+}
+
 .intro {
     &__content {
         display: flex;
@@ -1189,6 +1193,47 @@
 }
 
 // === / ARRIVE ===
+// === IMAGINE ===
+.imagine {
+    &-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &-photo {
+        max-width: $base*111.5;
+        width: 100%;
+        &__inner {
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: relative;
+            height: $base*86.25;
+            img {
+                position: absolute;
+                top: $base*4.5;
+                left: $base*5;
+                border-radius: $base*48;
+                border: 3px solid $color-secondary-100;
+                max-width: $base*101.5;
+                width: 100%;
+                max-height: $base*76.5;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    &-info {
+        max-width: $base*111.25;
+        margin-left: $base*22;
+        &__text {
+            color: $color-secondary-200;
+            font-weight: $fw-light;
+            line-height: 26px;
+        }
+    }
+}
+
+// === / IMAGINE ===
 // === FOOTER ===
 .footer {
     background-color: $color-secondary-50;
