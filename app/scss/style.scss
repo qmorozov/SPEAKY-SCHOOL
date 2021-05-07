@@ -304,6 +304,13 @@
             margin-bottom: $base*10;
             margin-top: $base*17.5;
         }
+        &__text {
+            font-weight: $fw-medium;
+            font-size: 22px;
+            line-height: 24px;
+            color: $color-secondary-200;
+            margin-bottom: $base*10;
+        }
     }
     &-images {
         flex-basis: 45%;
@@ -1293,6 +1300,52 @@
 }
 
 // === / SHALL ===
+// === INTELLIGIBLY ===
+.intelligibly {
+    &-wrapper {
+        background: $color-secondary-50;
+        border-radius: 70px;
+        padding: 100px 100px;
+    }
+    &-content {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    &-info {
+        max-width: 437px;
+        width: 100%;
+        &__title {}
+        &__text {
+            margin-bottom: 40px;
+        }
+        &__button {}
+    }
+    &-photo {
+        max-width: 290px;
+        width: 100%;
+        &__inner {
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: relative;
+            height: 286px;
+            img {
+                position: absolute;
+                top: 32px;
+                left: 30px;
+                border: 3px solid #FDE9D4;
+                border-radius: 50px;
+                max-width: 222px;
+                width: 100%;
+                max-height: 222px;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+// === / INTELLIGIBLY ===
 // === FOOTER ===
 .footer {
     background-color: $color-secondary-50;
