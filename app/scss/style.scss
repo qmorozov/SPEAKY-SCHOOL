@@ -1027,6 +1027,13 @@
     }
 }
 
+.foreign--offline {
+    .foreign-photo__inner img {
+        border-radius: 100%;
+        border-top-right-radius: 0;
+    }
+}
+
 .foreign-photo {
     max-width: $base*88.25;
     width: 100%;
