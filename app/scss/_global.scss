@@ -471,6 +471,7 @@ input[type="number"]::-webkit-inner-spin-button {
         background: #FFFFFF;
         border: 1px solid #FFECA0;
         border-radius: $base*2.5;
+        max-width: 420px;
         width: 100%;
         padding: $base*3 $base*5;
         &--visible {

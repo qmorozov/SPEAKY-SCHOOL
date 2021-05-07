@@ -209,6 +209,18 @@
             }
         }
     }
+    // === ARRIVE ===
+    .arrive {
+        &-items {
+            flex-direction: column;
+        }
+        &-item {
+            &:nth-child(odd) {
+                padding-right: 0px;
+            }
+            width: 100%;
+        }
+    }
 }
 
 @media (min-width: 900px) {
@@ -411,6 +423,24 @@
             &+& {
                 margin-top: 60px;
                 margin-left: 0px;
+            }
+        }
+    }
+    // === ARRIVE ===
+    .arrive {
+        .title {
+            font-size: 20px;
+            line-height: 28px;
+        }
+        &-items {}
+        &-item {
+            &+& {
+                margin-top: 15px;
+            }
+            &__text {
+                font-size: 16px;
+                line-height: 24px;
+                margin-left: 18px;
             }
         }
     }

@@ -1150,6 +1150,38 @@
 }
 
 // === / PACKAGES ===
+// === ARRIVE ===
+.arrive {
+    .section-inner {
+        max-width: $base*243.75;
+    }
+    &-wrapper {}
+    .title {
+        margin-bottom: $base*10;
+    }
+    &-items {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &-item {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        &:nth-child(odd) {
+            padding-right: $base*25;
+        }
+        &__photo {}
+        &__text {
+            font-weight: $fw-medium;
+            font-size: $fs-m;
+            line-height: $base*7.5;
+            color: $color-secondary-200;
+            margin-left: $base*8.25;
+        }
+    }
+}
+
+// === / ARRIVE ===
 // === FOOTER ===
 .footer {
     background-color: $color-secondary-50;
