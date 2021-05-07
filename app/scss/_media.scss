@@ -437,6 +437,16 @@
             }
         }
     }
+    // === SHALL ===
+    .shall {
+        &-items {
+            flex-wrap: wrap;
+        }
+        &-item {
+            width: 50%;
+            margin-bottom: 14px;
+        }
+    }
 }
 
 @media (max-width: 600px) {
@@ -579,6 +589,20 @@
             }
         }
     }
+    // === SHALL ===
+    .shall {
+        .title {
+            margin-bottom: 40px;
+            font-size: 20px;
+            line-height: 28px;
+        }
+        &-item {
+            &__text {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+    }
 }
 
 @media (max-width: 375px) {
@@ -602,5 +626,9 @@
             top: 13px;
             left: 5px;
         }
+    }
+    // === SHALL ===
+    .shall {
+        .title {}
     }
 }
