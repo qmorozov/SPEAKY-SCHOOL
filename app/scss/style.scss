@@ -374,6 +374,19 @@
             margin-left: $base*24;
         }
     }
+    &--adult {
+        .assignment-item {
+            &+& {
+                margin-left: 30px;
+            }
+        }
+    }
+}
+
+.assignment--adult {
+    .assignment-item+.assignment-item {
+        margin-left: 53px;
+    }
 }
 
 // === / ASSIGNEMENT ===

@@ -259,6 +259,10 @@
             margin-left: 0px;
         }
     }
+    // == ASSIGNMENT ===
+    .assignment--adult .assignment-item+.assignment-item {
+        margin-left: 35px;
+    }
 }
 
 @media (min-width: 900px) {
@@ -272,6 +276,30 @@
 }
 
 @media (max-width: 760px) {
+    // === GLOBAL ===
+    .section-outer {
+        padding-bottom: $base*25;
+    }
+    // === ASSIGNMENT ===
+    .assignment.section-outer {
+        padding-bottom: $base*25;
+    }
+    .assignment {
+        &--adult {
+            .assignment-item+.assignment-item {
+                margin-left: 0px;
+            }
+        }
+        &-items {
+            flex-direction: column;
+        }
+        &-item {
+            &+& {
+                margin-top: 60px;
+                margin-left: 0px;
+            }
+        }
+    }
     // === FOOTER ====
     .footer {
         &__items {
@@ -293,6 +321,9 @@
         }
     }
     // === INTRO ===
+    .intro.section-outer {
+        padding-bottom: $base*25;
+    }
     .intro {
         &__content {
             flex-direction: column;
@@ -448,7 +479,7 @@
     }
     // === ASSIGNEMENT ===
     .assignment.section-outer {
-        padding-top: $base*20;
+        // padding-top: $base*20;
         padding-bottom: $base*20;
     }
     // === TRUST === 
@@ -477,18 +508,6 @@
 }
 
 @media (max-width: 600px) {
-    // === ASSIGNEMENT ===
-    .assignment {
-        &-items {
-            flex-direction: column;
-        }
-        &-item {
-            &+& {
-                margin-top: 60px;
-                margin-left: 0px;
-            }
-        }
-    }
     // === ARRIVE ===
     .arrive {
         .title {
@@ -596,7 +615,7 @@
 }
 
 @media (max-width: 400px) {
-    // === INTRO ===
+    // === GLOBAL ===
     h1 {
         font-size: 30px;
         line-height: 40px;
