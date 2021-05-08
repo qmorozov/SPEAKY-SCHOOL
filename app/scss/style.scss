@@ -741,6 +741,10 @@
     }
 }
 
+.smart__item:last-child {
+    margin-bottom: 0px;
+}
+
 .smart__item:nth-child(odd) {
     &::before {
         right: 40%;
