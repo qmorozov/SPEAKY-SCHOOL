@@ -31,7 +31,7 @@
                 background-image: url(../images/default-images/illustration-10.png);
                 bottom: 0;
                 background-position: bottom;
-                padding: 65px 20px;
+                padding: 65px 12px;
                 max-width: 375px;
                 margin: 0 auto;
                 height: 876px;
@@ -49,11 +49,11 @@
             //     min-width: 160px;
             // }
             &-input {
-                max-width: 158px;
+                max-width: 164px;
             }
         }
         .tab-list+.tab-list {
-            margin-left: 10px;
+            margin-left: 15px;
         }
         &__item {
             &-radio-text {
@@ -341,6 +341,16 @@
         &__item:nth-child(even)::before {
             left: 18%;
         }
+        &__top-items {
+            justify-content: space-between;
+        }
+        .smart__top-item+.smart__top-item {
+            margin-left: 45px;
+        }
+    }
+    // === HISTORY ===
+    .history__slider-inner .swiper-pagination-bullet {
+        padding: 0px 35px 35px;
     }
 }
 
@@ -493,11 +503,24 @@
     }
     // === SMART ===
     .smart {
+        &__top-items {
+            justify-content: space-between;
+        }
         &__top-item {
             &+& {
                 margin-left: 30px;
             }
         }
+    }
+    // === HISTORY ===
+    .history__slider-inner .swiper-pagination-bullet {
+        padding: 0px 25px 35px;
+    }
+    .history__slide-content {
+        justify-content: space-around;
+    }
+    .history__slide-photo {
+        margin-right: 0px;
     }
 }
 
@@ -619,6 +642,19 @@
                 max-width: 309px;
             }
         }
+    }
+    // === HISTORY ===
+    .history__slider-pagination.swiper-pagination {
+        display: none;
+    }
+    .history__slide-content {
+        margin-top: 0px;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .history__slide-info {
+        order: -1;
+        margin-bottom: 40px;
     }
 }
 
@@ -845,6 +881,23 @@
             }
         }
     }
+    // === HISTORY ===
+    .history {
+        .title {
+            font-size: 20px;
+            line-height: 28px;
+            margin-bottom: 40px;
+        }
+        .history__slide-info-title {
+            font-size: 20px;
+            line-height: 28px;
+            margin-bottom: 20px;
+        }
+        .history__slide-info-text {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
 }
 
 @media (max-width: 400px) {
@@ -983,6 +1036,10 @@
                 }
             }
         }
+    }
+    // === HISTORY ===
+    .history__slide-photo-inner {
+        height: 285px;
     }
 }
 
