@@ -213,3 +213,104 @@ const getScrollbarWidth = () => {
     breakpointChecker();
 })();
 // === / RESULT SECTION ===
+
+// === PACKAGES ===
+document.querySelectorAll('.packages__content-item').forEach(function(item) {
+    const circle = item.querySelector('.packages__content-item-circle');
+    circle.addEventListener('click', function() {
+        item.classList.toggle('packages__content-item--active');
+    });
+});
+/////////////////////////////////////////////////////////////////////////////
+let duration = document.querySelector('.packages__content-item-duration');
+let label = document.querySelectorAll('.packages__lesson-radio-label');
+let time = document.querySelector('.packages__content-item-time');
+
+document.querySelectorAll('.packages__lesson-radio').forEach(function(item) {
+    item.addEventListener('click', function() {
+        // === OFFLINE ===
+        if (document.getElementById('packages__lesson-offline').checked) {
+            console.log('offline');
+            label[3].style.display = 'block';
+            time.classList.remove('packages__content-item-time--visible');
+        };
+
+        if (document.getElementById('packages__lesson-offline').checked && document.getElementById('packages__lesson-individual').checked) {
+            console.log('offline');
+            duration.innerHTML = '60 минут';
+        };
+
+        if (document.getElementById('packages__lesson-offline').checked && document.getElementById('packages__lesson-group').checked) {
+            console.log('offline');
+            duration.innerHTML = '60 минут';
+        };
+
+        if (document.getElementById('packages__lesson-offline').checked && document.getElementById('packages__lesson-spoken').checked) {
+            console.log('offline');
+            duration.innerHTML = '60 минут';
+        };
+        // === ONLINE ===
+        if (document.getElementById('packages__lesson-online').checked) {
+            console.log('online');
+            label[3].style.display = 'none';
+        };
+
+        if (document.getElementById('packages__lesson-online').checked && document.getElementById('packages__lesson-individual').checked) {
+            console.log('online');
+            duration.innerHTML = '';
+            time.classList.add('packages__content-item-time--visible');
+        };
+
+        if (document.getElementById('packages__lesson-online').checked && document.getElementById('packages__lesson-spoken').checked) {
+            console.log('online');
+            duration.innerHTML = '60 минут';
+            time.classList.remove('packages__content-item-time--visible');
+        };
+
+    });
+});
+
+
+// === PACKAGES ===
+
+// let duration = document.querySelector('.packages__content-item-duration');
+// let label = document.querySelectorAll('.packages__lesson-radio-label');
+// let time = document.querySelector('.packages__content-item-time');
+
+// document.querySelectorAll('.packages__lesson-radio').forEach(function(item) {
+//     item.addEventListener('click', function() {
+
+//         if (item.value === 'offline') {
+//             duration.innerHTML = '60 минут';
+//             label[3].style.display = 'block';
+//         };
+
+//         if (item.value === 'offline' || item.value === 'individual') {
+//             time.classList.remove('packages__content-item-time--visible');
+//             duration.innerHTML = '60 минут';
+//         };
+
+//         if (item.value === 'offline' || item.value === 'group') {
+//             duration.innerHTML = '60 минут';
+//         };
+
+//         if (item.value === 'offline' || item.value === 'spoken') {
+//             duration.innerHTML = '60 минут';
+//         };
+//         //////////////
+//         if (item.value === 'online') {
+//             label[3].style.display = 'none';
+//         };
+
+//         if (item.value === 'online' || item.value === 'individual') {
+//             time.classList.add('packages__content-item-time--visible');
+//             duration.innerHTML = '';
+//         }
+
+//         if (item.value === 'online' || item.value === 'spoken') {
+//             time.classList.remove('packages__content-item-time--visible');
+//             duration.innerHTML = '60 минут';
+//         }
+
+//     });
+// });
