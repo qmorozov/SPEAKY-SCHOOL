@@ -222,47 +222,38 @@ document.querySelectorAll('.packages__content-item').forEach(function(item) {
     });
 });
 /////////////////////////////////////////////////////////////////////////////
-let duration = document.querySelector('.packages__content-item-duration');
-let label = document.querySelectorAll('.packages__lesson-radio-label');
-let time = document.querySelector('.packages__content-item-time');
+const duration = document.querySelector('.packages__content-item-duration'),
+    label = document.querySelectorAll('.packages__lesson-radio-label'),
+    time = document.querySelector('.packages__content-item-time');
+
+const offline = document.getElementById('lesson-offline'),
+    online = document.getElementById('lesson-online'),
+    individual = document.getElementById('lesson-individual'),
+    group = document.getElementById('lesson-group'),
+    spoken = document.getElementById('lesson-spoken');
 
 document.querySelectorAll('.packages__lesson-radio').forEach(function(item) {
     item.addEventListener('click', function() {
         // === OFFLINE ===
-        if (document.getElementById('packages__lesson-offline').checked) {
-            console.log('offline');
+        if (offline.checked) {
             label[3].style.display = 'block';
             time.classList.remove('packages__content-item-time--visible');
         };
 
-        if (document.getElementById('packages__lesson-offline').checked && document.getElementById('packages__lesson-individual').checked) {
-            console.log('offline');
-            duration.innerHTML = '60 минут';
-        };
-
-        if (document.getElementById('packages__lesson-offline').checked && document.getElementById('packages__lesson-group').checked) {
-            console.log('offline');
-            duration.innerHTML = '60 минут';
-        };
-
-        if (document.getElementById('packages__lesson-offline').checked && document.getElementById('packages__lesson-spoken').checked) {
-            console.log('offline');
+        if (offline.checked && individual.checked || group.checked || spoken.checked) {
             duration.innerHTML = '60 минут';
         };
         // === ONLINE ===
-        if (document.getElementById('packages__lesson-online').checked) {
-            console.log('online');
+        if (online.checked) {
             label[3].style.display = 'none';
         };
 
-        if (document.getElementById('packages__lesson-online').checked && document.getElementById('packages__lesson-individual').checked) {
-            console.log('online');
+        if (online.checked && individual.checked) {
             duration.innerHTML = '';
             time.classList.add('packages__content-item-time--visible');
         };
 
-        if (document.getElementById('packages__lesson-online').checked && document.getElementById('packages__lesson-spoken').checked) {
-            console.log('online');
+        if (online.checked && spoken.checked) {
             duration.innerHTML = '60 минут';
             time.classList.remove('packages__content-item-time--visible');
         };
