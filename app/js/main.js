@@ -145,10 +145,10 @@ let mySwiper = new Swiper('.history__slider-container', {
 // === / SWIPER-SLIDER ===
 
 // === TOGGLE MENU ===
-const btn = document.querySelector('.btn-burger');
-const nav = document.querySelector('.header-navigation--mobile');
-const mainNavigation = document.getElementById('main-navigation');
-const headerSection = document.querySelector('.section-header');
+const btn = document.querySelector('.btn-burger'),
+    nav = document.querySelector('.header-navigation--mobile'),
+    mainNavigation = document.getElementById('main-navigation'),
+    headerSection = document.querySelector('.section-header');
 btn.addEventListener('click', function(event) {
     nav.classList.toggle('header-navigation--active');
     headerSection.classList.toggle('section-header--active');
@@ -224,27 +224,53 @@ document.querySelectorAll('.packages__content-item').forEach(function(item) {
 /////////////////////////////////////////////////////////////////////////////
 const duration = document.querySelector('.packages__content-item-duration'),
     label = document.querySelectorAll('.packages__lesson-radio-label'),
-    time = document.querySelector('.packages__content-item-time');
+    time = document.querySelector('.packages__content-item-time'),
+    itemTitleViewTeaching = document.querySelector('.packages__content-item-title--view-teaching'),
+    itemTitleViewTraining = document.querySelector('.packages__content-item-title--view-training'),
+    itemTitleViewDuration = document.querySelector('.packages__content-item-title--view-duration');
 
 const offline = document.getElementById('lesson-offline'),
     online = document.getElementById('lesson-online'),
     individual = document.getElementById('lesson-individual'),
     group = document.getElementById('lesson-group'),
-    spoken = document.getElementById('lesson-spoken');
+    spoken = document.getElementById('lesson-spoken'),
+    thirty = document.getElementById('lesson-thirty-minutes'),
+    sixty = document.getElementById('lesson-sixty-minutes');
 
 document.querySelectorAll('.packages__lesson-radio').forEach(function(item) {
     item.addEventListener('click', function() {
+        // === GENERAL ===
+        if (individual.checked) {
+            itemTitleViewTraining.innerHTML = 'Индивидуально';
+        } else if (group.checked) {
+            itemTitleViewTraining.innerHTML = 'В группе';
+        } else if (spoken.checked) {
+            itemTitleViewTraining.innerHTML = 'Разговорный клуб';
+        };
+
+        if (thirty.checked) {
+            itemTitleViewDuration.innerHTML = 'Длительность: 30 мин';
+        } else if (sixty.checked) {
+            itemTitleViewDuration.innerHTML = 'Длительность: 60 мин';
+        };
         // === OFFLINE ===
         if (offline.checked) {
             label[3].style.display = 'block';
+            itemTitleViewTeaching.innerHTML = 'Офлайн';
             time.classList.remove('packages__content-item-time--visible');
         };
 
         if (offline.checked && individual.checked || group.checked || spoken.checked) {
             duration.innerHTML = '60 минут';
+            itemTitleViewDuration.innerHTML = 'Длительность: 60 мин';
+        };
+        // === OFFLINE CARD ===
+        if (offline.checked && individual.checked) {
+            console.log("offline = individual");
         };
         // === ONLINE ===
         if (online.checked) {
+            itemTitleViewTeaching.innerHTML = 'Онлайн';
             label[3].style.display = 'none';
         };
 
@@ -263,45 +289,3 @@ document.querySelectorAll('.packages__lesson-radio').forEach(function(item) {
 
 
 // === PACKAGES ===
-
-// let duration = document.querySelector('.packages__content-item-duration');
-// let label = document.querySelectorAll('.packages__lesson-radio-label');
-// let time = document.querySelector('.packages__content-item-time');
-
-// document.querySelectorAll('.packages__lesson-radio').forEach(function(item) {
-//     item.addEventListener('click', function() {
-
-//         if (item.value === 'offline') {
-//             duration.innerHTML = '60 минут';
-//             label[3].style.display = 'block';
-//         };
-
-//         if (item.value === 'offline' || item.value === 'individual') {
-//             time.classList.remove('packages__content-item-time--visible');
-//             duration.innerHTML = '60 минут';
-//         };
-
-//         if (item.value === 'offline' || item.value === 'group') {
-//             duration.innerHTML = '60 минут';
-//         };
-
-//         if (item.value === 'offline' || item.value === 'spoken') {
-//             duration.innerHTML = '60 минут';
-//         };
-//         //////////////
-//         if (item.value === 'online') {
-//             label[3].style.display = 'none';
-//         };
-
-//         if (item.value === 'online' || item.value === 'individual') {
-//             time.classList.add('packages__content-item-time--visible');
-//             duration.innerHTML = '';
-//         }
-
-//         if (item.value === 'online' || item.value === 'spoken') {
-//             time.classList.remove('packages__content-item-time--visible');
-//             duration.innerHTML = '60 минут';
-//         }
-
-//     });
-// });

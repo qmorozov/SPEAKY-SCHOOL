@@ -1227,15 +1227,20 @@
             cursor: pointer;
             transition: $transition;
         }
-        &-title {
+        &-title,
+        &-subtitle {
             font-weight: 500;
             font-size: 18px;
             line-height: 30px;
             position: absolute;
-            bottom: -44px;
+            bottom: -66px;
             left: 0;
             white-space: nowrap;
             transform: translateX(calc(-50% + 20px));
+            text-align: center;
+            &--view-training {
+                max-width: 122px;
+            }
         }
         &-dropdown {
             z-index: 10;
