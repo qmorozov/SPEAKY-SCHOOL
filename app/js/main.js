@@ -226,6 +226,7 @@ const duration = document.querySelector('.packages__content-item-duration'),
     label = document.querySelectorAll('.packages__lesson-radio-label'),
     time = document.querySelector('.packages__content-item-time'),
     range = document.querySelectorAll('.packages__content-item-circle'),
+    box = document.querySelectorAll('.packages__content-item'),
     itemTitleViewTeaching = document.querySelector('.packages__content-item-title--view-teaching'),
     itemTitleViewTraining = document.querySelector('.packages__content-item-title--view-training'),
     itemTitleViewDuration = document.querySelector('.packages__content-item-title--view-duration');
@@ -241,21 +242,23 @@ const offline = document.getElementById('lesson-offline'),
 document.querySelectorAll('.packages__lesson-radio').forEach(function(item) {
     item.addEventListener('click', function() {
 
+        if (thirty.checked || sixty.checked) {
+            range[2].classList.add('packages__content-item-circle--checked');
+        };
+
         // === GENERAL ===
         if (online.checked || offline.checked) {
             range[0].classList.add('packages__content-item-circle--checked');
-            range[1].classList.add('packages__content-item--active');
+            box[1].classList.add('packages__content-item--active');
         };
 
-        if (thirty.checked || sixty.checked) {
-            console.log('f');
-            range[2].classList.add('packages__content-item-circle--checked');
+        if (individual.checked || group.checked || spoken.checked) {
+            box[2].classList.add('packages__content-item--active');
         };
 
         if (individual.checked || group.checked || spoken.checked) {
             range[1].classList.add('packages__content-item-circle--checked');
         };
-
 
         ////////////
         if (individual.checked) {
@@ -267,11 +270,11 @@ document.querySelectorAll('.packages__lesson-radio').forEach(function(item) {
         };
 
 
-        if (thirty.checked) {
-            itemTitleViewDuration.innerHTML = 'Длительность: 30 мин';
-        } else if (sixty.checked) {
-            itemTitleViewDuration.innerHTML = 'Длительность: 60 мин';
-        };
+        // if (thirty.checked) {
+        //     itemTitleViewDuration.innerHTML = 'Длительность: 30 мин';
+        // } else if (sixty.checked) {
+        //     itemTitleViewDuration.innerHTML = 'Длительность: 60 мин';
+        // };
 
 
         // === OFFLINE ===
