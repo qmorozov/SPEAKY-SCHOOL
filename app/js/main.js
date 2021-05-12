@@ -225,6 +225,7 @@ document.querySelectorAll('.packages__content-item').forEach(function(item) {
 const duration = document.querySelector('.packages__content-item-duration'),
     label = document.querySelectorAll('.packages__lesson-radio-label'),
     time = document.querySelector('.packages__content-item-time'),
+    range = document.querySelectorAll('.packages__content-item-circle'),
     itemTitleViewTeaching = document.querySelector('.packages__content-item-title--view-teaching'),
     itemTitleViewTraining = document.querySelector('.packages__content-item-title--view-training'),
     itemTitleViewDuration = document.querySelector('.packages__content-item-title--view-duration');
@@ -239,7 +240,24 @@ const offline = document.getElementById('lesson-offline'),
 
 document.querySelectorAll('.packages__lesson-radio').forEach(function(item) {
     item.addEventListener('click', function() {
+
         // === GENERAL ===
+        if (online.checked || offline.checked) {
+            range[0].classList.add('packages__content-item-circle--checked');
+            range[1].classList.add('packages__content-item--active');
+        };
+
+        if (thirty.checked || sixty.checked) {
+            console.log('f');
+            range[2].classList.add('packages__content-item-circle--checked');
+        };
+
+        if (individual.checked || group.checked || spoken.checked) {
+            range[1].classList.add('packages__content-item-circle--checked');
+        };
+
+
+        ////////////
         if (individual.checked) {
             itemTitleViewTraining.innerHTML = 'Индивидуально';
         } else if (group.checked) {
@@ -248,11 +266,14 @@ document.querySelectorAll('.packages__lesson-radio').forEach(function(item) {
             itemTitleViewTraining.innerHTML = 'Разговорный клуб';
         };
 
+
         if (thirty.checked) {
             itemTitleViewDuration.innerHTML = 'Длительность: 30 мин';
         } else if (sixty.checked) {
             itemTitleViewDuration.innerHTML = 'Длительность: 60 мин';
         };
+
+
         // === OFFLINE ===
         if (offline.checked) {
             label[3].style.display = 'block';
@@ -262,6 +283,7 @@ document.querySelectorAll('.packages__lesson-radio').forEach(function(item) {
 
         if (offline.checked && individual.checked || group.checked || spoken.checked) {
             duration.innerHTML = '60 минут';
+            range[2].classList.add('packages__content-item-circle--checked');
             itemTitleViewDuration.innerHTML = 'Длительность: 60 мин';
         };
         // === OFFLINE CARD ===
@@ -276,10 +298,9 @@ document.querySelectorAll('.packages__lesson-radio').forEach(function(item) {
 
         if (online.checked && individual.checked) {
             duration.innerHTML = '';
+            range[2].classList.remove('packages__content-item-circle--checked');
             time.classList.add('packages__content-item-time--visible');
-        };
-
-        if (online.checked && spoken.checked) {
+        } else if (online.checked && spoken.checked) {
             duration.innerHTML = '60 минут';
             time.classList.remove('packages__content-item-time--visible');
         };
