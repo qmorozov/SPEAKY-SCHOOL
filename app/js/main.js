@@ -254,12 +254,9 @@ document.querySelectorAll('.packages__lesson-radio').forEach(function(item) {
 
         if (individual.checked || group.checked || spoken.checked) {
             box[2].classList.add('packages__content-item--active');
-        };
-
-        if (individual.checked || group.checked || spoken.checked) {
             range[1].classList.add('packages__content-item-circle--checked');
-        };
 
+        };
         ////////////
         if (individual.checked) {
             itemTitleViewTraining.innerHTML = 'Индивидуально';
@@ -269,13 +266,12 @@ document.querySelectorAll('.packages__lesson-radio').forEach(function(item) {
             itemTitleViewTraining.innerHTML = 'Разговорный клуб';
         };
 
-
-        // if (thirty.checked) {
-        //     itemTitleViewDuration.innerHTML = 'Длительность: 30 мин';
-        // } else if (sixty.checked) {
-        //     itemTitleViewDuration.innerHTML = 'Длительность: 60 мин';
-        // };
-
+        if (thirty.checked) {
+            itemTitleViewDuration.innerHTML = 'Длительность: 30 мин';
+            range[2].classList.add('packages__content-item-circle--checked');
+        } else if (sixty.checked) {
+            itemTitleViewDuration.innerHTML = 'Длительность: 60 мин';
+        };
 
         // === OFFLINE ===
         if (offline.checked) {
@@ -289,10 +285,6 @@ document.querySelectorAll('.packages__lesson-radio').forEach(function(item) {
             range[2].classList.add('packages__content-item-circle--checked');
             itemTitleViewDuration.innerHTML = 'Длительность: 60 мин';
         };
-        // === OFFLINE CARD ===
-        if (offline.checked && individual.checked) {
-            console.log("offline = individual");
-        };
         // === ONLINE ===
         if (online.checked) {
             itemTitleViewTeaching.innerHTML = 'Онлайн';
@@ -301,13 +293,16 @@ document.querySelectorAll('.packages__lesson-radio').forEach(function(item) {
 
         if (online.checked && individual.checked) {
             duration.innerHTML = '';
-            range[2].classList.remove('packages__content-item-circle--checked');
+            time.classList.remove('packages__content-item-time--visible');
             time.classList.add('packages__content-item-time--visible');
         } else if (online.checked && spoken.checked) {
             duration.innerHTML = '60 минут';
             time.classList.remove('packages__content-item-time--visible');
         };
-
+        // === OFFLINE CARD ===
+        // if (offline.checked && individual.checked) {
+        //     console.log("offline = individual");
+        // };
     });
 });
 
