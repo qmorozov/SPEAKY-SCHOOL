@@ -1179,8 +1179,8 @@
         padding-bottom: 0px;
     }
     &-wrapper {
-        padding-bottom: 140px;
-        height: 457px;
+        // padding-bottom: 140px;
+        //height: 457px;
     }
     &__top {
         text-align: center;
@@ -1355,6 +1355,20 @@
     }
 }
 
+.packages__content-item-cards {
+    margin-top: 0%;
+    display: flex;
+    justify-content: space-around;
+    opacity: 0;
+    overflow: hidden;
+    transition: all $transition;
+    &--active {
+        opacity: 1;
+        overflow: visible;
+        margin-top: 25%;
+    }
+}
+
 .packages-card {
     background-repeat: no-repeat;
     background-position: top center;
@@ -1363,7 +1377,7 @@
     border-radius: 30px;
     background-color: #FFFBED;
     &__wrapper {
-        padding: 0px 64px 62px 64px;
+        padding: 0px 50px 62px 64px;
         min-height: 440px;
         text-align: center;
         display: flex;
