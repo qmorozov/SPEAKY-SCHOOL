@@ -302,12 +302,6 @@ document.querySelectorAll('.packages__lesson-radio').forEach(function(item) {
             time.classList.remove('packages__content-item-time--visible');
         };
         ////////////////////////////////////////////////////////////////////
-        // if (range[0].classList.contains('packages__content-item-circle--checked') &&
-        //     range[1].classList.contains('packages__content-item-circle--checked') &&
-        //     range[2].classList.contains('packages__content-item-circle--checked')) {
-        //     console.log('three');
-        // };
-        ////////////////////////////////////////////////////////////////////
         // === OFFLINE CARD ===
         if (offline.checked && individual.checked && itemTitleViewDuration.innerHTML == 'Длительность: 60 мин') {
             cards.classList.add('packages__content-item-cards--active');
@@ -384,7 +378,6 @@ document.querySelectorAll('.packages__lesson-radio').forEach(function(item) {
             cardTime[2].innerHTML = '12 занятий по 60 мин';
             cardPrice[2].innerHTML = '16200  ₽';
         };
-        /////////////////////////////////////////////////////////////////////
     });
 });
 
