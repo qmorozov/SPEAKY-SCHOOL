@@ -239,6 +239,7 @@ const offline = document.getElementById('lesson-offline'),
     thirty = document.getElementById('lesson-thirty-minutes'),
     sixty = document.getElementById('lesson-sixty-minutes');
 
+
 // === CARD ===
 const cardTime = document.querySelectorAll('.packages-card__time'),
     cardPrice = document.querySelectorAll('.packages-card__price'),
@@ -246,11 +247,15 @@ const cardTime = document.querySelectorAll('.packages-card__time'),
 
 document.querySelectorAll('.packages__lesson-radio').forEach(function(item) {
     item.addEventListener('click', function() {
+
         ///////////////////////////////////////////////////////////////
+
         if (thirty.checked || sixty.checked) {
             range[2].classList.add('packages__content-item-circle--checked');
         };
+
         // === GENERAL ===
+
         if (online.checked || offline.checked) {
             range[0].classList.add('packages__content-item-circle--checked');
             box[1].classList.add('packages__content-item--active');
@@ -260,7 +265,9 @@ document.querySelectorAll('.packages__lesson-radio').forEach(function(item) {
             box[2].classList.add('packages__content-item--active');
             range[1].classList.add('packages__content-item-circle--checked');
         };
+
         ////////////
+
         if (individual.checked) {
             itemTitleViewTraining.innerHTML = 'Индивидуально';
         } else if (group.checked) {
@@ -270,12 +277,14 @@ document.querySelectorAll('.packages__lesson-radio').forEach(function(item) {
         };
 
         if (thirty.checked) {
-            itemTitleViewDuration.innerHTML = 'Длительность: 30 мин';
+            itemTitleViewDuration.innerHTML = '30 мин';
             range[2].classList.add('packages__content-item-circle--checked');
         } else if (sixty.checked) {
-            itemTitleViewDuration.innerHTML = 'Длительность: 60 мин';
+            itemTitleViewDuration.innerHTML = '60 мин';
         };
+
         // === OFFLINE ===
+
         if (offline.checked) {
             label[3].style.display = 'block';
             itemTitleViewTeaching.innerHTML = 'Офлайн';
@@ -287,7 +296,9 @@ document.querySelectorAll('.packages__lesson-radio').forEach(function(item) {
             range[2].classList.add('packages__content-item-circle--checked');
             itemTitleViewDuration.innerHTML = 'Длительность: 60 мин';
         };
+
         // === ONLINE ===
+
         if (online.checked) {
             itemTitleViewTeaching.innerHTML = 'Онлайн';
             label[3].style.display = 'none';
@@ -301,8 +312,10 @@ document.querySelectorAll('.packages__lesson-radio').forEach(function(item) {
             duration.innerHTML = '60 минут';
             time.classList.remove('packages__content-item-time--visible');
         };
+
         ////////////////////////////////////////////////////////////////////
         // === OFFLINE CARD ===
+
         if (offline.checked && individual.checked && itemTitleViewDuration.innerHTML == 'Длительность: 60 мин') {
             cards.classList.add('packages__content-item-cards--active');
 
@@ -341,7 +354,9 @@ document.querySelectorAll('.packages__lesson-radio').forEach(function(item) {
             cardTime[2].innerHTML = '12 занятий по 60 мин';
             cardPrice[2].innerHTML = '11850 ₽';
         };
+
         // === ONLINE CARD ===
+
         if (online.checked && individual.checked && thirty.checked) {
             cards.classList.add('packages__content-item-cards--active');
 
@@ -354,6 +369,7 @@ document.querySelectorAll('.packages__lesson-radio').forEach(function(item) {
             cardTime[2].innerHTML = '12 занятий по 30 мин';
             cardPrice[2].innerHTML = '10200  ₽';
         };
+
         if (online.checked && individual.checked && sixty.checked) {
             cards.classList.add('packages__content-item-cards--active');
 
@@ -366,6 +382,7 @@ document.querySelectorAll('.packages__lesson-radio').forEach(function(item) {
             cardTime[2].innerHTML = '12 занятий по 60 мин';
             cardPrice[2].innerHTML = '16200  ₽';
         };
+
         if (online.checked && spoken.checked && itemTitleViewDuration.innerHTML === 'Длительность: 60 мин') {
             cards.classList.add('packages__content-item-cards--active');
 
@@ -378,8 +395,53 @@ document.querySelectorAll('.packages__lesson-radio').forEach(function(item) {
             cardTime[2].innerHTML = '12 занятий по 60 мин';
             cardPrice[2].innerHTML = '16200  ₽';
         };
+        /////////////////////////////////////////////////////
+
+        if (document.documentElement.clientWidth <= 700) {
+
+            if (range[0].classList.contains('packages__content-item-circle--checked')) {
+                if (box[0].classList.contains('packages__content-item--active')) {
+                    box[0].classList.remove('packages__content-item--active');
+                };
+            };
+
+            if (range[1].classList.contains('packages__content-item-circle--checked')) {
+                if (box[1].classList.contains('packages__content-item--active')) {
+                    box[1].classList.remove('packages__content-item--active');
+                };
+            };
+
+            if (range[2].classList.contains('packages__content-item-circle--checked')) {
+                if (box[2].classList.contains('packages__content-item--active')) {
+                    box[2].classList.remove('packages__content-item--active');
+                };
+            };
+
+        };
+
+        if (document.documentElement.clientWidth >= 700) {
+
+            if (range[0].classList.contains('packages__content-item-circle--checked')) {
+                if (box[0].classList.contains('packages__content-item--active')) {
+                    box[0].classList.add('packages__content-item--active');
+                };
+            };
+
+            if (range[1].classList.contains('packages__content-item-circle--checked')) {
+                if (box[1].classList.contains('packages__content-item--active')) {
+                    box[1].classList.add('packages__content-item--active');
+                };
+            };
+
+            if (range[2].classList.contains('packages__content-item-circle--checked')) {
+                if (box[2].classList.contains('packages__content-item--active')) {
+                    box[2].classList.add('packages__content-item--active');
+                };
+            };
+
+        };
+        //////////////////////////////////////////////////////////////
     });
 });
-
 
 // === PACKAGES ===

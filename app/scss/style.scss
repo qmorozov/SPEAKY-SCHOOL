@@ -1207,6 +1207,9 @@
         border-radius: $base/2;
     }
     &-item {
+        &+& {
+            margin-left: 30px;
+        }
         &--active {
             .packages__content-item-circle {
                 $circle-color: #689C9A;
@@ -1223,6 +1226,9 @@
             .packages__content-item-dropdown {
                 opacity: 1;
                 visibility: visible;
+                &+& {
+                    margin-left: 30px;
+                }
             }
         }
         position: relative;
@@ -1364,7 +1370,9 @@
     opacity: 0;
     overflow: hidden;
     transition: all $transition;
+    height: 250px;
     &--active {
+        height: 100%;
         opacity: 1;
         overflow: visible;
         margin-top: 25%;
@@ -1378,6 +1386,9 @@
     width: 100%;
     border-radius: $base*7.5;
     background-color: $color-secondary-50;
+    &+& {
+        margin-left: 30px;
+    }
     &__wrapper {
         padding: 0px $base*15.25 $base*15.5 $base*16;
         min-height: $base*110;
