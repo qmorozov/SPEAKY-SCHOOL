@@ -299,17 +299,49 @@
     &-info {
         flex-basis: 55%;
         margin-right: $base*8.75;
+        color: $color-secondary-200;
         &__title {
             text-transform: uppercase;
             margin-bottom: $base*10;
             margin-top: $base*17.5;
         }
+        &__subtitle {
+            margin-top: 10px;
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 30px;
+        }
         &__text {
             font-weight: $fw-medium;
             font-size: 22px;
             line-height: 24px;
-            color: $color-secondary-200;
             margin-bottom: $base*10;
+        }
+        &__wording {
+            margin-top: 60px;
+            &-title {
+                @include NextArt;
+                text-transform: uppercase;
+                font-weight: 900;
+                font-size: 24px;
+                line-height: 34px;
+            }
+            &-subtitle {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 30px;
+                margin-top: 10px;
+            }
+        }
+        &__entrepreneur {
+            margin-top: 60px;
+            font-size: 16px;
+            line-height: 26px;
+            letter-spacing: 0.02em;
+            &-info {}
+            &-article {
+                margin-top: 15px;
+            }
         }
     }
     &-images {
@@ -321,6 +353,15 @@
             max-height: 560px;
             object-fit: contain;
         }
+    }
+}
+
+.intro-public {
+    .intro-info__title {
+        margin-bottom: 0px;
+    }
+    &.section-outer {
+        padding-bottom: $base*35;
     }
 }
 
@@ -1592,6 +1633,51 @@
 }
 
 // === / INTELLIGIBLY ===
+// === CONTRACT ===
+.contract__box {
+    column-count: 2;
+    counter-reset: contract__box;
+    .contract-box__content {
+        &::before {
+            content: counter(contract__box) ". ";
+            counter-increment: contract__box;
+        }
+    }
+}
+
+.contract-box {
+    &__content {
+        margin-top: 100px;
+        &:first-child {
+            margin-top: 0px;
+        }
+        &-title {
+            display: inline-block;
+            font-weight: $fw-medium;
+            font-size: $fs-m;
+            line-height: 30px;
+            margin-bottom: 30px;
+        }
+    }
+    &__сontent-list {
+        counter-reset: contract-box__сontent-list;
+        &-item {
+            font-weight: 300;
+            line-height: 26px;
+            letter-spacing: 0.02em;
+            color: $color-secondary-200;
+            &+& {
+                margin-top: 30px;
+            }
+            &::before {
+                content: counter(contract__box)"."counter(contract-box__сontent-list) " ";
+                counter-increment: contract-box__сontent-list;
+            }
+        }
+    }
+}
+
+// === / CONTRACT ===
 // === FOOTER ===
 .footer {
     background-color: $color-secondary-50;
