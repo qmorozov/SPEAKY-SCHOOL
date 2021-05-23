@@ -363,7 +363,7 @@
     .packages__content-item-cards--active {
         margin-top: 40%;
     }
-    .packages-card {
+    .price-card {
         margin-bottom: 30px;
     }
     .packages__content-item-cards {
@@ -543,7 +543,7 @@
         margin-right: 0px;
     }
     // === PACKAGES ===
-    .packages-card {
+    .price-card {
         &+& {
             margin-left: 0px;
         }

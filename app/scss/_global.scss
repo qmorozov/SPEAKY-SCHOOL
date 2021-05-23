@@ -108,6 +108,58 @@ h1 {
     }
 }
 
+// === TABS ===
+.tabs-content__item-container {
+    display: flex;
+    justify-content: center;
+    transition: all $transition;
+    .price-card+.price-card {
+        margin-left: 73px;
+    }
+}
+
+.tabs {
+    text-align: center;
+    &-item {
+        display: inline-block;
+        text-align: center;
+        font-size: $fs-m;
+        line-height: $base*7.5;
+        font-weight: $fw-medium;
+        max-width: 260px;
+        width: 100%;
+        position: relative;
+        cursor: pointer;
+        margin-bottom: $base*10;
+        margin-left: -.22em;
+        /////////
+        border: none;
+        background: none;
+        &::before {
+            content: "";
+            position: absolute;
+            background: #94C6C4;
+            height: 2px;
+            width: 100%;
+            bottom: -6px;
+            left: 0;
+            right: 0;
+            transition: all $transition;
+        }
+        &[aria-selected="true"] {
+            &::before {
+                background: $color-primary-50;
+            }
+        }
+        // &--active {
+        //     &::before {
+        //         background: $color-primary-50;
+        //     }
+        // }
+    }
+}
+
+// === / TABS ===
 // === FORM POPUP LESSON ====
 .popup {
     &--trial {

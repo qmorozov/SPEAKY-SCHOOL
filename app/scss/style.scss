@@ -1420,7 +1420,7 @@
     }
 }
 
-.packages-card {
+.price-card {
     background-repeat: no-repeat;
     background-position: top center;
     max-width: $base*75;
@@ -1431,12 +1431,16 @@
         margin-left: 30px;
     }
     &__wrapper {
-        padding: 0px $base*15.25 $base*15.5 $base*16;
+        padding: 0px 55px 62px 55px;
         min-height: $base*110;
         text-align: center;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        align-items: center;
+        &--depend {
+            padding: 0px 40px 40px 40px;
+        }
     }
     &__time {
         font-weight: $fw-medium;
@@ -1452,6 +1456,15 @@
         letter-spacing: 0.02em;
     }
     &__btn {}
+    &__depend {
+        margin-top: 19px;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 14px;
+        /* identical to box height */
+        letter-spacing: 0.02em;
+        color: #000000;
+    }
 }
 
 // === / PACKAGES ===
@@ -1662,7 +1675,7 @@
     &__сontent-list {
         counter-reset: contract-box__сontent-list;
         &-item {
-            font-weight: 300;
+            font-weight: $fw-light;
             line-height: 26px;
             letter-spacing: 0.02em;
             color: $color-secondary-200;
@@ -1678,6 +1691,18 @@
 }
 
 // === / CONTRACT ===
+// === TRAINING ===
+.training {
+    &-wrapepr {}
+    &-top {
+        margin-bottom: $base*10;
+    }
+    &-title {
+        text-align: center;
+    }
+}
+
+// === / TRAINING ===
 // === FOOTER ===
 .footer {
     background-color: $color-secondary-50;
