@@ -41,59 +41,60 @@
                     <button class="popup-btn js-modal-close">Закрыть</button>
                     <div class="tab-content">
                         <div class="popup-title tab-title">Записаться на пробное занятие</div>
-                        <div class="popup-tab__wrapper tab-wrapper">
-                            <div class="tab-items">
-                                <span class="tab-list tab--active" data-tab="#tab_1">Взрослые</span>
-                                <span class="tab-list" data-tab="#tab_2">Дети и подростки</span>
+                        <div class="tabs" data-tabs>
+                            <div class="tabs-items" data-list>
+                                <button class="tabs-item tabs-item--popup" data-target="tab1">Взрослые</button>
+                                <button class="tabs-item tabs-item--popup" data-target="tab2">Дети и подростки</button>
                             </div>
-                            <div class="popup-tab__content">
-                                <div class="tab-item tab-content--active" id="tab_1">
-                                    <div class="popup__item-info">
-                                        <form class="popup__item-form">
-                                            <div class="popup__select">
-                                                <div class="select-wrapper">
-                                                    <button type="button" class="select-btn">Английский язык</button>
-                                                    <ul class="select-list">
-                                                        <li class="select-list__item" data-value="english">Английский язык
-                                                        </li>
-                                                        <li class="select-list__item" data-value="france">Французский язык
-                                                        </li>
-                                                        <li class="select-list__item" data-value="germany">Немецкий язык
-                                                        </li>
-                                                        <li class="select-list__item" data-value="spain">Испанский язык
-                                                        </li>
-                                                    </ul>
-                                                    <input type="text" name="select-category" class="select-hidden">
-                                                </div>
+                            <!-- <div class="popup-tab__content"> -->
+                            <div class="tabs-content__item tabs__container" data-tab="tab1">
+                                <div class="tabs-content__item-container popup__item-info">
+                                    <form class="popup__item-form">
+                                        <div class="popup__select">
+                                            <div class="select-wrapper">
+                                                <button type="button" class="select-btn">Английский язык</button>
+                                                <ul class="select-list">
+                                                    <li class="select-list__item" data-value="english">Английский язык
+                                                    </li>
+                                                    <li class="select-list__item" data-value="france">Французский язык
+                                                    </li>
+                                                    <li class="select-list__item" data-value="germany">Немецкий язык
+                                                    </li>
+                                                    <li class="select-list__item" data-value="spain">Испанский язык
+                                                    </li>
+                                                </ul>
+                                                <input type="text" name="select-category" class="select-hidden">
                                             </div>
-                                            <div class="popup__item-chose">
-                                                <label for="online-old" class="popup__item-radio-online popup__item-radio-box">
+                                        </div>
+                                        <div class="popup__item-chose">
+                                            <label class="popup__item-radio-online popup__item-radio-box">
                                                     <input type="radio" id="online-old" class="popup__item-radio"
                                                         name="popup__item-radio" checked>
                                                     <span class="popup__item-radio-fake"></span>
                                                     <span class="popup__item-radio-text">Онлайн-занятия</span>
                                                 </label>
-                                                <label for="offline-old" class="popup__item-radio-offline popup__item-radio-box">
+                                            <label class="popup__item-radio-offline popup__item-radio-box">
                                                     <input type="radio" id="offline-old" class="popup__item-radio"
                                                         name="popup__item-radio">
                                                     <span class="popup__item-radio-fake"></span>
                                                     <span class="popup__item-radio-text">Занятия в клубе</span>
                                                 </label>
+                                        </div>
+                                        <div class="popup__item-personal-date">
+                                            <div class="popup__item-personal-date-item">
+                                                <input type="text" class="popup__item-personal-name popup-input" placeholder="Имя" name="name" required>
+                                                <input type="tel" class="popup__item-personal-phone popup-input" placeholder="Телефон" name="phone" required>
                                             </div>
-                                            <div class="popup__item-personal-date">
-                                                <div class="popup__item-personal-date-item">
-                                                    <input type="text" class="popup__item-personal-name popup-input" placeholder="Имя" name="name" required>
-                                                    <input type="tel" class="popup__item-personal-phone popup-input" placeholder="Телефон" name="phone" required>
-                                                </div>
-                                                <div class="popup__item-personal-date-item">
-                                                    <input type="email" class="popup__item-personal-email popup-input" placeholder="Почта" name="email" required>
-                                                </div>
+                                            <div class="popup__item-personal-date-item">
+                                                <input type="email" class="popup__item-personal-email popup-input" placeholder="Почта" name="email" required>
                                             </div>
-                                            <button class="popup__item-btn btn" type="submit">Отправить</button>
-                                        </form>
-                                    </div>
+                                        </div>
+                                        <button class="popup__item-btn btn" type="submit">Отправить</button>
+                                    </form>
                                 </div>
-                                <div class="tab-item" id="tab_2">
+                            </div>
+                            <div class="tabs-content__item tabs__container" data-tab="tab2">
+                                <div class="tabs-content__item-container popup__item-info">
                                     <form class="popup__item-form">
                                         <div class="popup__select">
                                             <div class="select-wrapper">
@@ -111,14 +112,14 @@
                                             </div>
                                         </div>
                                         <div class="popup__item-chose">
-                                            <label for="online-child" class="popup__item-radio-online popup__item-radio-box">
-                                                <input type="radio" id="online-child" class="popup__item-radio"
+                                            <label class="popup__item-radio-online popup__item-radio-box">
+                                                <input type="radio" id="online-old" class="popup__item-radio"
                                                     name="popup__item-radio" checked>
                                                 <span class="popup__item-radio-fake"></span>
                                                 <span class="popup__item-radio-text">Онлайн-занятия</span>
                                             </label>
-                                            <label for="offline-child" class="popup__item-radio-offline popup__item-radio-box">
-                                                <input type="radio" id="offline-child" class="popup__item-radio"
+                                            <label class="popup__item-radio-offline popup__item-radio-box">
+                                                <input type="radio" id="offline-old" class="popup__item-radio"
                                                     name="popup__item-radio">
                                                 <span class="popup__item-radio-fake"></span>
                                                 <span class="popup__item-radio-text">Занятия в клубе</span>
@@ -141,6 +142,7 @@
                                     </form>
                                 </div>
                             </div>
+                            <!-- </div> -->
                         </div>
                     </div>
                 </div>
@@ -674,59 +676,14 @@
                 <div class="popup-inner">
                     <div class="tab-content">
                         <div class="popup-title tab-title">Записаться на пробное занятие</div>
-                        <div class="popup-tab__wrapper tab-wrapper">
-                            <div class="tab-items">
-                                <span class="tab-list tab--active" data-tab="#tab_1">Взрослые</span>
-                                <span class="tab-list" data-tab="#tab_2">Дети и подростки</span>
+                        <div class="tabs" data-tabs>
+                            <div class="tabs-items" data-list>
+                                <button class="tabs-item tabs-item--popup" data-target="tab3">Взрослые</button>
+                                <button class="tabs-item tabs-item--popup" data-target="tab4">Дети и подростки</button>
                             </div>
-                            <div class="popup-tab__content">
-                                <div class="tab-item tab-content--active" id="tab_1">
-                                    <div class="popup__item-info">
-                                        <form class="popup__item-form">
-                                            <div class="popup__select">
-                                                <div class="select-wrapper">
-                                                    <button type="button" class="select-btn">Английский язык</button>
-                                                    <ul class="select-list">
-                                                        <li class="select-list__item" data-value="english">Английский язык
-                                                        </li>
-                                                        <li class="select-list__item" data-value="france">Французский язык
-                                                        </li>
-                                                        <li class="select-list__item" data-value="germany">Немецкий язык
-                                                        </li>
-                                                        <li class="select-list__item" data-value="spain">Испанский язык
-                                                        </li>
-                                                    </ul>
-                                                    <input type="text" name="select-category" class="select-hidden">
-                                                </div>
-                                            </div>
-                                            <div class="popup__item-chose">
-                                                <label class="popup__item-radio-online popup__item-radio-box">
-                                                        <input type="radio" id="online-old" class="popup__item-radio"
-                                                            name="popup__item-radio" checked>
-                                                        <span class="popup__item-radio-fake"></span>
-                                                        <span class="popup__item-radio-text">Онлайн-занятия</span>
-                                                    </label>
-                                                <label class="popup__item-radio-offline popup__item-radio-box">
-                                                        <input type="radio" id="offline-old" class="popup__item-radio"
-                                                            name="popup__item-radio">
-                                                        <span class="popup__item-radio-fake"></span>
-                                                        <span class="popup__item-radio-text">Занятия в клубе</span>
-                                                    </label>
-                                            </div>
-                                            <div class="popup__item-personal-date">
-                                                <div class="popup__item-personal-date-item">
-                                                    <input type="text" class="popup__item-personal-name popup-input" placeholder="Имя" name="name" required>
-                                                    <input type="tel" class="popup__item-personal-phone popup-input" placeholder="Телефон" name="phone" required>
-                                                </div>
-                                                <div class="popup__item-personal-date-item">
-                                                    <input type="email" class="popup__item-personal-email popup-input" placeholder="Почта" name="email" required>
-                                                </div>
-                                            </div>
-                                            <button class="popup__item-btn btn" type="submit">Отправить</button>
-                                        </form>
-                                    </div>
-                                </div>
-                                <div class="tab-item" id="tab_2">
+                            <!-- <div class="popup-tab__content"> -->
+                            <div class="tabs-content__item tabs__container" data-tab="tab3">
+                                <div class="tabs-content__item-container popup__item-info">
                                     <form class="popup__item-form">
                                         <div class="popup__select">
                                             <div class="select-wrapper">
@@ -738,9 +695,10 @@
                                                     </li>
                                                     <li class="select-list__item" data-value="germany">Немецкий язык
                                                     </li>
-                                                    <li class="select-list__item" data-value="spain">Испанский язык</li>
+                                                    <li class="select-list__item" data-value="spain">Испанский язык
+                                                    </li>
                                                 </ul>
-                                                <input type="text" name="select-category" value="" class="select-hidden">
+                                                <input type="text" name="select-category" class="select-hidden">
                                             </div>
                                         </div>
                                         <div class="popup__item-chose">
@@ -759,6 +717,51 @@
                                         </div>
                                         <div class="popup__item-personal-date">
                                             <div class="popup__item-personal-date-item">
+                                                <input type="text" class="popup__item-personal-name popup-input" placeholder="Имя" name="name" required>
+                                                <input type="tel" class="popup__item-personal-phone popup-input" placeholder="Телефон" name="phone" required>
+                                            </div>
+                                            <div class="popup__item-personal-date-item">
+                                                <input type="email" class="popup__item-personal-email popup-input" placeholder="Почта" name="email" required>
+                                            </div>
+                                        </div>
+                                        <button class="popup__item-btn btn" type="submit">Отправить</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="tabs-content__item tabs__container" data-tab="tab4">
+                                <div class="tabs-content__item-container popup__item-info">
+                                    <form class="popup__item-form">
+                                        <div class="popup__select">
+                                            <div class="select-wrapper">
+                                                <button type="button" class="select-btn">Английский язык</button>
+                                                <ul class="select-list">
+                                                    <li class="select-list__item" data-value="english">Английский язык
+                                                    </li>
+                                                    <li class="select-list__item" data-value="france">Французский язык
+                                                    </li>
+                                                    <li class="select-list__item" data-value="germany">Немецкий язык
+                                                    </li>
+                                                    <li class="select-list__item" data-value="spain">Испанский язык</li>
+                                                </ul>
+                                                <input type="text" name="select-category" value="" class="select-hidden">
+                                            </div>
+                                        </div>
+                                        <div class="popup__item-chose">
+                                            <label class="popup__item-radio-online popup__item-radio-box">
+                                                <input type="radio" id="online-old" class="popup__item-radio"
+                                                    name="popup__item-radio" checked>
+                                                <span class="popup__item-radio-fake"></span>
+                                                <span class="popup__item-radio-text">Онлайн-занятия</span>
+                                            </label>
+                                            <label class="popup__item-radio-offline popup__item-radio-box">
+                                                <input type="radio" id="offline-old" class="popup__item-radio"
+                                                    name="popup__item-radio">
+                                                <span class="popup__item-radio-fake"></span>
+                                                <span class="popup__item-radio-text">Занятия в клубе</span>
+                                            </label>
+                                        </div>
+                                        <div class="popup__item-personal-date">
+                                            <div class="popup__item-personal-date-item">
                                                 <input type="text" class="popup__item-personal-name popup-input" placeholder="Имя родителя" name="name">
                                                 <input type="tel" class="popup__item-personal-phone popup-input" placeholder="Телефон" name="phone">
                                             </div>
@@ -774,6 +777,7 @@
                                     </form>
                                 </div>
                             </div>
+                            <!-- </div> -->
                         </div>
                     </div>
                 </div>

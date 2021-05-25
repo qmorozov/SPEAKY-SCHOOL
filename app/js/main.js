@@ -101,33 +101,33 @@ const getScrollBarWidth = () => {
 // === / POPUP ===
 
 // === TABS ===
-document.querySelectorAll('.tab-content').forEach(function(tabContent) {
+// document.querySelectorAll('.tab-content').forEach(function(tabContent) {
 
-    const tabsBtn = tabContent.querySelectorAll('.tab-list');
-    const tabsItems = tabContent.querySelectorAll('.tab-item');
+//     const tabsBtn = tabContent.querySelectorAll('.tab-list');
+//     const tabsItems = tabContent.querySelectorAll('.tab-item');
 
-    tabsBtn.forEach(onTabClick);
+//     tabsBtn.forEach(onTabClick);
 
-    document.querySelector('.tab-list').click();
+//     document.querySelector('.tab-list').click();
 
-    function onTabClick(item) {
-        item.addEventListener('click', function() {
-            let currentBtn = item;
-            let tabId = currentBtn.getAttribute("data-tab");
-            let currentTab = tabContent.querySelector(tabId);
-            if (!currentBtn.classList.contains('tab--active')) {
-                tabsBtn.forEach(function(item) {
-                    item.classList.remove('tab--active');
-                });
-                tabsItems.forEach(function(item) {
-                    item.classList.remove('tab-content--active');
-                });
-            }
-            currentBtn.classList.add('tab--active');
-            currentTab.classList.add('tab-content--active');
-        });
-    };
-});
+//     function onTabClick(item) {
+//         item.addEventListener('click', function() {
+//             let currentBtn = item;
+//             let tabId = currentBtn.getAttribute("data-tab");
+//             let currentTab = tabContent.querySelector(tabId);
+//             if (!currentBtn.classList.contains('tab--active')) {
+//                 tabsBtn.forEach(function(item) {
+//                     item.classList.remove('tab--active');
+//                 });
+//                 tabsItems.forEach(function(item) {
+//                     item.classList.remove('tab-content--active');
+//                 });
+//             }
+//             currentBtn.classList.add('tab--active');
+//             currentTab.classList.add('tab-content--active');
+//         });
+//     };
+// });
 
 // === / TABS ===
 
@@ -534,7 +534,7 @@ class Tabs {
 const containers = document.querySelectorAll('[data-tabs]');
 for (let container of containers) {
     const tabs = Tabs.create(container);
-    console.log(tabs)
+    //  console.log(tabs)
 }
 
 // === / TABS ===

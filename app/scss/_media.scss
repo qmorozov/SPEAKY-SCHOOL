@@ -31,7 +31,7 @@
                 background-image: url(../images/default-images/illustration-10.png);
                 bottom: 0;
                 background-position: bottom;
-                padding: 65px 12px;
+                padding: 35px 12px;
                 max-width: 375px;
                 margin: 0 auto;
                 height: 876px;
@@ -81,6 +81,13 @@
             display: flex;
             justify-content: center;
             margin: 0 auto;
+        }
+        .tabs-item--popup {
+            max-width: 160px;
+        }
+        .tabs-item {
+            font-size: 16px;
+            line-height: 17px;
         }
     }
     // === LANGUAGES ===

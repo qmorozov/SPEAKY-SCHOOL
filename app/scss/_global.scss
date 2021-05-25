@@ -111,30 +111,56 @@ h1 {
 // === TABS ===
 .tabs-content__item-container {
     display: flex;
-    justify-content: center;
     transition: all $transition;
+    &--training {
+        justify-content: center;
+        &-online {
+            display: inline;
+            .tabs-item--training-online {
+                max-width: 140px;
+            }
+        }
+    }
+    &--popup {}
     .price-card+.price-card {
         margin-left: 73px;
     }
 }
 
 .tabs {
-    text-align: center;
+    &--training {
+        text-align: center;
+    }
+    &-items {}
     &-item {
         display: inline-block;
         text-align: center;
         font-size: $fs-m;
         line-height: $base*7.5;
         font-weight: $fw-medium;
-        max-width: 260px;
         width: 100%;
         position: relative;
         cursor: pointer;
         margin-bottom: $base*10;
-        margin-left: -.22em;
         /////////
         border: none;
         background: none;
+        &--training {
+            max-width: 260px;
+            margin-left: -.22em;
+            &-online {
+                max-width: 260px;
+                &+& {
+                    margin-left: 20px;
+                }
+            }
+        }
+        &--popup {
+            max-width: 200px;
+            &+& {
+                margin-left: 20px;
+            }
+        }
         &::before {
             content: "";
             position: absolute;
@@ -151,11 +177,6 @@ h1 {
                 background: $color-primary-50;
             }
         }
-        // &--active {
-        //     &::before {
-        //         background: $color-primary-50;
-        //     }
-        // }
     }
 }
 
@@ -310,45 +331,6 @@ input[type="number"]::-webkit-inner-spin-button {
     // }
 }
 
-.tab-list {
-    display: inline-block;
-    text-align: center;
-    font-size: $fs-m;
-    line-height: $base*7.5;
-    font-weight: 500;
-    min-width: 200px;
-    position: relative;
-    cursor: pointer;
-    margin-bottom: $base*7.5;
-    &+& {
-        margin-left: $base*5;
-    }
-    &::before {
-        content: "";
-        position: absolute;
-        background: #94C6C4;
-        height: 2px;
-        width: 100%;
-        bottom: -6px;
-        left: 0;
-        right: 0;
-        transition: $transition;
-    }
-    // &--active {
-    //     &::before {
-    //         background: $color-primary-50;
-    //     }
-    // }
-    &__item {
-        display: flex;
-        max-width: 425px;
-        display: none;
-        // &:first-child {
-        //     display: block;
-        // }
-    }
-}
-
 .tab-item {
     display: none;
     // &:first-child {
@@ -422,6 +404,7 @@ input[type="number"]::-webkit-inner-spin-button {
     }
     &-chose {
         margin-bottom: $base*3.5;
+        text-align: center;
     }
     &-radio {
         display: none;
@@ -467,6 +450,7 @@ input[type="number"]::-webkit-inner-spin-button {
             line-height: $base*6.5;
         }
         &-box {
+            cursor: pointer;
             &+& {
                 margin-left: $base*16.75;
             }
