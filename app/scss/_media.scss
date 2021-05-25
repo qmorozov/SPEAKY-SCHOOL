@@ -379,6 +379,13 @@
     .packages__content {
         justify-content: space-around;
     }
+    // === TRAINING ===
+    .tabs-item--training {
+        max-width: 220px;
+    }
+    .tabs-content__item-container .price-card+.price-card {
+        margin-left: 15px;
+    }
 }
 
 @media (min-width: 900px) {
@@ -563,6 +570,25 @@
     .packages__lesson-text {
         font-size: 14px;
         line-height: 22px;
+    }
+    // === TRAINING ===
+    .tabs-item {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .tabs-item--training {
+        max-width: 195px;
+        &+& {
+            margin-left: 15px;
+        }
+    }
+    .tabs-content__item-container--training {
+        flex-direction: column;
+        align-items: center;
+    }
+    .tabs-content__item-container .price-card+.price-card {
+        margin-left: 0px;
     }
 }
 
@@ -828,6 +854,9 @@
         line-height: 21px;
         bottom: -50px;
     }
+    .tabs-item--training-online {
+        max-width: 195px;
+    }
 }
 
 @media (max-width: 500px) {
@@ -1026,6 +1055,26 @@
     .packages__content-item-dropdown {
         min-width: 180px;
         max-width: 180px;
+    }
+    // === TRAINING ===
+    .tabs-item--training+.tabs-item--training {
+        margin-left: 10px;
+    }
+    .tabs-item {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .tabs-item--training-online+.tabs-item--training-online {
+        margin-left: 10px;
+    }
+    .tabs-item--training {
+        max-width: 170px;
+    }
+    .tabs-item {
+        margin-bottom: 20px;
+    }
+    .tabs-item {
+        width: auto;
     }
 }
 
