@@ -117,13 +117,13 @@ h1 {
         &-online {
             display: inline;
             .tabs-item--training-online {
-                max-width: 140px;
+                max-width: $base*35;
             }
         }
     }
     &--popup {}
     .price-card+.price-card {
-        margin-left: 73px;
+        margin-left: $base*18.25;
     }
 }
 
@@ -142,7 +142,6 @@ h1 {
         position: relative;
         cursor: pointer;
         margin-bottom: $base*10;
-        /////////
         border: none;
         background: none;
         &--training {
@@ -288,7 +287,7 @@ input[type="number"]::-webkit-inner-spin-button {
         background-size: contain;
         background-size: 30% 100%;
         background-color: $color-secondary-50;
-        border-radius: 70px;
+        border-radius: $base*17.5;
         z-index: 10;
         transition: $transition;
         transform: translateY(-$base*12.5);
@@ -326,26 +325,6 @@ input[type="number"]::-webkit-inner-spin-button {
         letter-spacing: 0.02em;
         margin-bottom: $base*7.5;
     }
-    // &-content {
-    //     padding: $base*20;
-    // }
-}
-
-.tab-item {
-    display: none;
-    // &:first-child {
-    //     display: block;
-    // }
-}
-
-.tab--active {
-    &::before {
-        background: $color-primary-50;
-    }
-}
-
-.tab-content--active {
-    display: block;
 }
 
 .popup-input {

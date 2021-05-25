@@ -17,11 +17,19 @@
     font-family: 'Jost', sans-serif;
 }
 
+@function strip-unit($num) {
+    @return $num / ($num * 0 + 1);
+}
+
+@function rem($num) {
+    @return (strip-unit($num) / 16) * 1rem;
+}
+
 // === / MIXIN ===
 // === ANIMATION ===
 $transition: 0.3s;
 // === / ANIMATION ===
-$base: 4px;
+$base: rem(4px);
 // === COLOR ===
 // === PRIMARY-COLOR ===
 $color-primary-50: #236967;
@@ -40,13 +48,13 @@ $color-white: #FFFFFF;
 $color-black: #000000;
 // === / COLOR ===
 // === FONT-SIZE ===
-$fs-x-small: 12px;
-$fs-xs: 14px;
-$fs-s: 16px;
-$fs-m: 18px;
-$fs-l: 24px;
-$fs-xxl: 50px;
-$fs-xxl-big: 90px;
+$fs-x-small: rem(12px);
+$fs-xs: rem(14px);
+$fs-s: rem(16px);
+$fs-m: rem(18px);
+$fs-l: rem(24px);
+$fs-xxl: rem(50px);
+$fs-xxl-big: rem(90px);
 // === / FONT-SIZE ===
 // === FONT-WEIGHT ===
 $fw-light: 300;
