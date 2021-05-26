@@ -77,7 +77,7 @@
         padding-top: $base*4;
         position: absolute;
         opacity: 0;
-        transition: 0.3s linear opacity;
+        transition: $transition linear opacity;
         &-item {
             background-color: $color-primary-400;
             padding: $base*2.5 $base*5;
@@ -160,7 +160,7 @@
                 }
                 &-title {
                     font-weight: $fw-medium;
-                    font-size: $fs-s;
+                    // font-size: $fs-s;
                     line-height: 24px;
                     margin-bottom: $base*5;
                 }
@@ -171,7 +171,7 @@
         }
         &.header-navigation {
             align-items: normal;
-            transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transition: $transition cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
     }
 }
@@ -198,8 +198,8 @@
     border: none;
     background: none;
     cursor: pointer;
-    width: 20px;
-    height: 15px;
+    width: $base*5;
+    height: $base*3.75;
     padding: 0;
     &__line {
         display: block;
@@ -242,7 +242,7 @@
         z-index: 10;
         display: none;
         background: rgba(0, 0, 0, 0.5);
-        backdrop-filter: blur(4px);
+        backdrop-filter: blur($base);
     }
     &--active {
         &::before {
@@ -315,13 +315,13 @@
         }
         &__subtitle {
             margin-top: $base*2.5;
-            font-weight: 500;
-            font-size: 22px;
+            font-weight: $fw-medium;
+            font-size: $base*5.5;
             line-height: 30px;
         }
         &__text {
             font-weight: $fw-medium;
-            font-size: 22px;
+            font-size: $base*5.5;
             line-height: 24px;
             margin-bottom: $base*10;
         }
@@ -330,20 +330,20 @@
             &-title {
                 @include NextArt;
                 text-transform: uppercase;
-                font-weight: 900;
-                font-size: 24px;
+                font-weight: $fw-heavy;
+                font-size: $fs-l;
                 line-height: 34px;
             }
             &-subtitle {
-                font-weight: 500;
-                font-size: 18px;
+                font-weight: $fw-medium;
+                font-size: $fs-m;
                 line-height: 30px;
                 margin-top: $base*2.5;
             }
         }
         &__entrepreneur {
-            margin-top: 60px;
-            font-size: $fs-s;
+            margin-top: $base*15;
+            // font-size: $fs-s;
             line-height: 26px;
             letter-spacing: 0.02em;
             &-article {
@@ -425,7 +425,7 @@
     &--adult {
         .assignment-item {
             &+& {
-                margin-left: 30px;
+                margin-left: $base*7.5;
             }
         }
     }
@@ -433,7 +433,7 @@
 
 .assignment--adult {
     .assignment-item+.assignment-item {
-        margin-left: 53px;
+        margin-left: $base*13.25;
     }
 }
 
@@ -575,7 +575,7 @@
     }
     &-list {
         font-weight: $fw-light;
-        font-size: $fs-s;
+        // font-size: $fs-s;
         line-height: $base*6.5;
         letter-spacing: 0.02em;
         li {
@@ -672,7 +672,6 @@
         @include Jost;
         font-weight: $fw-heavy;
         font-size: $fs-xxl-big;
-        //line-height: 28px;
         color: $color-primary-400;
         letter-spacing: 0.5px;
         z-index: -1;
@@ -684,7 +683,7 @@
     }
     &-title {
         font-weight: $fw-light;
-        font-size: $fs-s;
+        // font-size: $fs-s;
         line-height: $base*6.5;
         letter-spacing: 0.02em;
         color: $color-primary-50;
@@ -839,7 +838,6 @@
     position: relative;
     height: 100%;
     &-inner {
-        // height: 388px;
         .swiper-pagination-bullet {
             background: none;
             padding: 0px $base*12.5 $base*8.75;
@@ -861,6 +859,8 @@
                 left: 48%;
                 border-radius: 50%;
                 transition: all $transition;
+                background-color: $color-white;
+                z-index: 1;
             }
             &::after {
                 content: "";
@@ -907,7 +907,7 @@
         margin-top: $base*15;
     }
     &-photo {
-        max-width: 345px;
+        max-width: $base*86.25;
         width: 100%;
         margin-right: $base*20.5;
         &-inner {
@@ -970,7 +970,7 @@
             &::before {
                 content: "";
                 position: absolute;
-                width: 6px;
+                width: $base*1.5;
                 height: 100%;
                 left: 0;
                 top: 0;
@@ -997,7 +997,7 @@
 .trust {
     &-wrapper {
         background: $color-secondary-50;
-        border-radius: 70px;
+        border-radius: $base*17.5;
         padding: $base*16.75 $base*16.75;
     }
     &-content {
@@ -1037,7 +1037,7 @@
         }
     }
     .title {
-        font-size: 30px;
+        font-size: $base*7.5;
         line-height: 44px;
     }
 }
@@ -1167,10 +1167,10 @@
         &--green {
             max-width: $base*16.5;
             &::before {
-                border-top-color: #236967;
+                border-top-color: $color-primary-50;
             }
             &::after {
-                background-color: #236967;
+                background-color: $color-primary-50;
             }
         }
         &--red {
@@ -1246,7 +1246,7 @@
         }
         &--active {
             .packages__content-item-circle {
-                $circle-color: $color-primary-100;
+                $circle-color: $color-secondary-300;
                 $circle-color--checked: $color-primary-50;
                 border-color: $circle-color;
                 background-color: $circle-color;
@@ -1442,7 +1442,7 @@
     }
     &__price {
         @include NextArt;
-        font-size: 22px;
+        font-size: $base*5.5;
         line-height: 30px;
         margin-bottom: $base*10;
         letter-spacing: 0.02em;
@@ -1551,7 +1551,7 @@
         &__number {
             @include NextArt;
             font-weight: $fw-heavy;
-            font-size: 40px;
+            font-size: $base*10;
             line-height: 34px;
             letter-spacing: 0.02em;
             color: $color-white;
@@ -1615,9 +1615,9 @@
             height: $base*71.5;
             img {
                 position: absolute;
-                top: 32px;
-                left: 30px;
-                border: 3px solid #FDE9D4;
+                top: $base*8;
+                left: $base*7.5;
+                border: 3px solid $color-secondary-100;
                 border-radius: $base*12.5;
                 max-width: $base*55.5;
                 width: 100%;
@@ -1644,7 +1644,7 @@
 
 .contract-box {
     &__content {
-        margin-top: 100px;
+        margin-top: $base*25;
         &:first-child {
             margin-top: 0px;
         }
@@ -1728,7 +1728,7 @@
     }
     &-list {
         font-weight: $fw-light;
-        font-size: $fs-s;
+        // font-size: $fs-s;
         line-height: $base*6.5;
         letter-spacing: 0.02em;
         color: $color-secondary-200;
