@@ -32,186 +32,6 @@
 
 <body>
 
-    <!-- POPUPS -->
-    <!-- POPUP-TRIAL -->
-    <div class="popup" id="popup-trial">
-        <div class="section-inner popup--trial">
-            <div class="popup-wrapper">
-                <div class="popup-inner">
-                    <button class="popup-btn js-modal-close">Закрыть</button>
-                    <div class="tab-content">
-                        <div class="popup-title tab-title">Записаться на пробное занятие</div>
-                        <div class="tabs" data-tabs>
-                            <div class="tabs-items" data-list>
-                                <button class="tabs-item tabs-item--popup" data-target="tab1">Взрослые</button>
-                                <button class="tabs-item tabs-item--popup" data-target="tab2">Дети и подростки</button>
-                            </div>
-                            <!-- <div class="popup-tab__content"> -->
-                            <div class="tabs-content__item tabs__container" data-tab="tab1">
-                                <div class="tabs-content__item-container popup__item-info">
-                                    <form class="popup__item-form">
-                                        <div class="popup__select">
-                                            <div class="select-wrapper">
-                                                <button type="button" class="select-btn">Английский язык</button>
-                                                <ul class="select-list">
-                                                    <li class="select-list__item" data-value="english">Английский язык
-                                                    </li>
-                                                    <li class="select-list__item" data-value="france">Французский язык
-                                                    </li>
-                                                    <li class="select-list__item" data-value="germany">Немецкий язык
-                                                    </li>
-                                                    <li class="select-list__item" data-value="spain">Испанский язык
-                                                    </li>
-                                                </ul>
-                                                <input type="text" name="select-category" class="select-hidden">
-                                            </div>
-                                        </div>
-                                        <div class="popup__item-chose">
-                                            <label class="popup__item-radio-online popup__item-radio-box">
-                                                    <input type="radio" id="online-old" class="popup__item-radio"
-                                                        name="popup__item-radio" checked>
-                                                    <span class="popup__item-radio-fake"></span>
-                                                    <span class="popup__item-radio-text">Онлайн-занятия</span>
-                                                </label>
-                                            <label class="popup__item-radio-offline popup__item-radio-box">
-                                                    <input type="radio" id="offline-old" class="popup__item-radio"
-                                                        name="popup__item-radio">
-                                                    <span class="popup__item-radio-fake"></span>
-                                                    <span class="popup__item-radio-text">Занятия в клубе</span>
-                                                </label>
-                                        </div>
-                                        <div class="popup__item-personal-date">
-                                            <div class="popup__item-personal-date-item">
-                                                <input type="text" class="popup__item-personal-name popup-input" placeholder="Имя" name="name" required>
-                                                <input type="tel" class="popup__item-personal-phone popup-input" placeholder="Телефон" name="phone" required>
-                                            </div>
-                                            <div class="popup__item-personal-date-item">
-                                                <input type="email" class="popup__item-personal-email popup-input" placeholder="Почта" name="email" required>
-                                            </div>
-                                        </div>
-                                        <button class="popup__item-btn btn" type="submit">Отправить</button>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="tabs-content__item tabs__container" data-tab="tab2">
-                                <div class="tabs-content__item-container popup__item-info">
-                                    <form class="popup__item-form">
-                                        <div class="popup__select">
-                                            <div class="select-wrapper">
-                                                <button type="button" class="select-btn">Английский язык</button>
-                                                <ul class="select-list">
-                                                    <li class="select-list__item" data-value="english">Английский язык
-                                                    </li>
-                                                    <li class="select-list__item" data-value="france">Французский язык
-                                                    </li>
-                                                    <li class="select-list__item" data-value="germany">Немецкий язык
-                                                    </li>
-                                                    <li class="select-list__item" data-value="spain">Испанский язык</li>
-                                                </ul>
-                                                <input type="text" name="select-category" value="" class="select-hidden">
-                                            </div>
-                                        </div>
-                                        <div class="popup__item-chose">
-                                            <label class="popup__item-radio-online popup__item-radio-box">
-                                                <input type="radio" id="online-old" class="popup__item-radio"
-                                                    name="popup__item-radio" checked>
-                                                <span class="popup__item-radio-fake"></span>
-                                                <span class="popup__item-radio-text">Онлайн-занятия</span>
-                                            </label>
-                                            <label class="popup__item-radio-offline popup__item-radio-box">
-                                                <input type="radio" id="offline-old" class="popup__item-radio"
-                                                    name="popup__item-radio">
-                                                <span class="popup__item-radio-fake"></span>
-                                                <span class="popup__item-radio-text">Занятия в клубе</span>
-                                            </label>
-                                        </div>
-                                        <div class="popup__item-personal-date">
-                                            <div class="popup__item-personal-date-item">
-                                                <input type="text" class="popup__item-personal-name popup-input" placeholder="Имя родителя" name="name">
-                                                <input type="tel" class="popup__item-personal-phone popup-input" placeholder="Телефон" name="phone">
-                                            </div>
-                                            <div class="popup__item-personal-date-item">
-                                                <input type="text" class="popup__item-personal-name popup-input" placeholder="Имя ребёнка" name="name">
-                                                <input type="number" class="popup__item-personal-age popup-input" placeholder="Возраст ребёнка" name="age" max="100" min="1">
-                                            </div>
-                                            <div class="popup__item-personal-date-item">
-                                                <input type="email" class="popup__item-personal-email popup-input" placeholder="Почта" name="email">
-                                            </div>
-                                        </div>
-                                        <button class="popup__item-btn btn" type="submit">Отправить</button>
-                                    </form>
-                                </div>
-                            </div>
-                            <!-- </div> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- / POPUP-TRIAL -->
-
-    <!-- POPUP-PAYMENT -->
-    <div class="popup" id="popup-payment">
-        <div class="section-inner popup--payment">
-            <div class="popup-wrapper">
-                <div class="popup-inner">
-                    <button class="popup-btn js-modal-close">Закрыть</button>
-                    <div class="tab-content">
-                        <div class="popup-title">Оплата услуг</div>
-                        <form class="popup__item-form">
-                            <div class="popup__item-personal-date">
-                                <div class="popup__item-personal-date-item">
-                                    <input type="text" class="popup__item-personal-name popup-input" placeholder="Имя" name="name" required>
-                                    <input type="tel" class="popup__item-personal-phone popup-input" placeholder="Телефон" name="phone" required>
-                                </div>
-                                <div class="popup__item-personal-date-item">
-                                    <input type="email" class="popup__item-personal-email popup-input" placeholder="Почта" name="email" required>
-                                </div>
-                                <div class="popup__item-personal-date-item">
-                                    <input type="number" class="popup__item-personal-money popup-input" placeholder="Сумма платежа" name="money" required>
-                                </div>
-                            </div>
-                            <div class="popup__item-privacy">
-                                Нажимая кнопку "Оплатить", <a href="#">Вы соглашаетесь с условиями договора оферты и
-                                    обработку персональных данных.</a>
-                            </div>
-                            <button class="popup__item-btn btn" type="submit">Оплатить</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- / POPUP-PAYMENT -->
-
-    <!-- POPUP-CALL -->
-    <div class="popup" id="popup-call">
-        <div class="section-inner popup--call">
-            <div class="popup-wrapper">
-                <div class="popup-inner">
-                    <button class="popup-btn js-modal-close">Закрыть</button>
-                    <div class="tab-content">
-                        <div class="popup-title">Заказать звонок</div>
-                        <form class="popup__item-form">
-                            <div class="popup__item-personal-date">
-                                <div class="popup__item-personal-date-item">
-                                    <input type="name" class="popup__item-personal-name popup-input" placeholder="Имя" name="name" required>
-                                </div>
-                                <div class="popup__item-personal-date-item">
-                                    <input type="number" class="popup__item-personal-phone popup-input" placeholder="Телефон" name="phone" required>
-                                </div>
-                            </div>
-                            <button class="popup__item-btn btn" type="submit">Отправить</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- / POPUP-CALL -->
-    <!-- / POPUPS -->
-
     <!-- HEADER -->
     <header class="header section-outer section-header">
         <!-- DESKTOP HEADER -->
@@ -642,6 +462,186 @@
         </div>
     </footer>
     <!-- / FOOTER -->
+
+    <!-- POPUPS -->
+    <!-- POPUP-TRIAL -->
+    <div class="popup" id="popup-trial">
+        <div class="section-inner popup--trial">
+            <div class="popup-wrapper">
+                <div class="popup-inner">
+                    <button class="popup-btn js-modal-close">Закрыть</button>
+                    <div class="tab-content">
+                        <div class="popup-title tab-title">Записаться на пробное занятие</div>
+                        <div class="tabs" data-tabs>
+                            <div class="tabs-items" data-list>
+                                <button class="tabs-item tabs-item--popup" data-target="tab1">Взрослые</button>
+                                <button class="tabs-item tabs-item--popup" data-target="tab2">Дети и подростки</button>
+                            </div>
+                            <!-- <div class="popup-tab__content"> -->
+                            <div class="tabs-content__item tabs__container" data-tab="tab1">
+                                <div class="tabs-content__item-container popup__item-info">
+                                    <form class="popup__item-form">
+                                        <div class="popup__select">
+                                            <div class="select-wrapper">
+                                                <button type="button" class="select-btn">Английский язык</button>
+                                                <ul class="select-list">
+                                                    <li class="select-list__item" data-value="english">Английский язык
+                                                    </li>
+                                                    <li class="select-list__item" data-value="france">Французский язык
+                                                    </li>
+                                                    <li class="select-list__item" data-value="germany">Немецкий язык
+                                                    </li>
+                                                    <li class="select-list__item" data-value="spain">Испанский язык
+                                                    </li>
+                                                </ul>
+                                                <input type="text" name="select-category" class="select-hidden">
+                                            </div>
+                                        </div>
+                                        <div class="popup__item-chose">
+                                            <label class="popup__item-radio-online popup__item-radio-box">
+                                                    <input type="radio" id="online-old" class="popup__item-radio"
+                                                        name="popup__item-radio" checked>
+                                                    <span class="popup__item-radio-fake"></span>
+                                                    <span class="popup__item-radio-text">Онлайн-занятия</span>
+                                                </label>
+                                            <label class="popup__item-radio-offline popup__item-radio-box">
+                                                    <input type="radio" id="offline-old" class="popup__item-radio"
+                                                        name="popup__item-radio">
+                                                    <span class="popup__item-radio-fake"></span>
+                                                    <span class="popup__item-radio-text">Занятия в клубе</span>
+                                                </label>
+                                        </div>
+                                        <div class="popup__item-personal-date">
+                                            <div class="popup__item-personal-date-item">
+                                                <input type="text" class="popup__item-personal-name popup-input" placeholder="Имя" name="name" required>
+                                                <input type="tel" class="popup__item-personal-phone popup-input" placeholder="Телефон" name="phone" required>
+                                            </div>
+                                            <div class="popup__item-personal-date-item">
+                                                <input type="email" class="popup__item-personal-email popup-input" placeholder="Почта" name="email" required>
+                                            </div>
+                                        </div>
+                                        <button class="popup__item-btn btn" type="submit">Отправить</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="tabs-content__item tabs__container" data-tab="tab2">
+                                <div class="tabs-content__item-container popup__item-info">
+                                    <form class="popup__item-form">
+                                        <div class="popup__select">
+                                            <div class="select-wrapper">
+                                                <button type="button" class="select-btn">Английский язык</button>
+                                                <ul class="select-list">
+                                                    <li class="select-list__item" data-value="english">Английский язык
+                                                    </li>
+                                                    <li class="select-list__item" data-value="france">Французский язык
+                                                    </li>
+                                                    <li class="select-list__item" data-value="germany">Немецкий язык
+                                                    </li>
+                                                    <li class="select-list__item" data-value="spain">Испанский язык</li>
+                                                </ul>
+                                                <input type="text" name="select-category" value="" class="select-hidden">
+                                            </div>
+                                        </div>
+                                        <div class="popup__item-chose">
+                                            <label class="popup__item-radio-online popup__item-radio-box">
+                                                <input type="radio" id="online-old" class="popup__item-radio"
+                                                    name="popup__item-radio" checked>
+                                                <span class="popup__item-radio-fake"></span>
+                                                <span class="popup__item-radio-text">Онлайн-занятия</span>
+                                            </label>
+                                            <label class="popup__item-radio-offline popup__item-radio-box">
+                                                <input type="radio" id="offline-old" class="popup__item-radio"
+                                                    name="popup__item-radio">
+                                                <span class="popup__item-radio-fake"></span>
+                                                <span class="popup__item-radio-text">Занятия в клубе</span>
+                                            </label>
+                                        </div>
+                                        <div class="popup__item-personal-date">
+                                            <div class="popup__item-personal-date-item">
+                                                <input type="text" class="popup__item-personal-name popup-input" placeholder="Имя родителя" name="name">
+                                                <input type="tel" class="popup__item-personal-phone popup-input" placeholder="Телефон" name="phone">
+                                            </div>
+                                            <div class="popup__item-personal-date-item">
+                                                <input type="text" class="popup__item-personal-name popup-input" placeholder="Имя ребёнка" name="name">
+                                                <input type="number" class="popup__item-personal-age popup-input" placeholder="Возраст ребёнка" name="age" max="100" min="1">
+                                            </div>
+                                            <div class="popup__item-personal-date-item">
+                                                <input type="email" class="popup__item-personal-email popup-input" placeholder="Почта" name="email">
+                                            </div>
+                                        </div>
+                                        <button class="popup__item-btn btn" type="submit">Отправить</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- / POPUP-TRIAL -->
+
+    <!-- POPUP-PAYMENT -->
+    <div class="popup" id="popup-payment">
+        <div class="section-inner popup--payment">
+            <div class="popup-wrapper">
+                <div class="popup-inner">
+                    <button class="popup-btn js-modal-close">Закрыть</button>
+                    <div class="tab-content">
+                        <div class="popup-title">Оплата услуг</div>
+                        <form class="popup__item-form">
+                            <div class="popup__item-personal-date">
+                                <div class="popup__item-personal-date-item">
+                                    <input type="text" class="popup__item-personal-name popup-input" placeholder="Имя" name="name" required>
+                                    <input type="tel" class="popup__item-personal-phone popup-input" placeholder="Телефон" name="phone" required>
+                                </div>
+                                <div class="popup__item-personal-date-item">
+                                    <input type="email" class="popup__item-personal-email popup-input" placeholder="Почта" name="email" required>
+                                </div>
+                                <div class="popup__item-personal-date-item">
+                                    <input type="number" class="popup__item-personal-money popup-input" placeholder="Сумма платежа" name="money" required>
+                                </div>
+                            </div>
+                            <div class="popup__item-privacy">
+                                Нажимая кнопку "Оплатить", <a href="#">Вы соглашаетесь с условиями договора оферты и
+                                    обработку персональных данных.</a>
+                            </div>
+                            <button class="popup__item-btn btn" type="submit">Оплатить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- / POPUP-PAYMENT -->
+
+    <!-- POPUP-CALL -->
+    <div class="popup" id="popup-call">
+        <div class="section-inner popup--call">
+            <div class="popup-wrapper">
+                <div class="popup-inner">
+                    <button class="popup-btn js-modal-close">Закрыть</button>
+                    <div class="tab-content">
+                        <div class="popup-title">Заказать звонок</div>
+                        <form class="popup__item-form">
+                            <div class="popup__item-personal-date">
+                                <div class="popup__item-personal-date-item">
+                                    <input type="name" class="popup__item-personal-name popup-input" placeholder="Имя" name="name" required>
+                                </div>
+                                <div class="popup__item-personal-date-item">
+                                    <input type="number" class="popup__item-personal-phone popup-input" placeholder="Телефон" name="phone" required>
+                                </div>
+                            </div>
+                            <button class="popup__item-btn btn" type="submit">Отправить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- / POPUP-CALL -->
+    <!-- / POPUPS -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/libs.min.js "></script>
