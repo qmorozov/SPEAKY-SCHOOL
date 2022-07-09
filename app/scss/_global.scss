@@ -1,9 +1,20 @@
 @import '_vars';
 @import '_fonts';
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    outline-offset: 20px;
+    transition: 0.2s all ease;
+    -webkit-tap-highlight-color: transparent;
+
+    &:focus {
+        border-radius: 3px;
+        outline: 4px solid $color-primary-50;
+        outline-offset: 0;
+    }
 }
 
 html {
@@ -75,7 +86,6 @@ h1 {
     padding: $base*4.5 $base*7.5;
     background-color: $color-primary-50;
     border-radius: $base*7.5;
-    outline: none;
     transition: all $transition;
     &:hover {
         box-shadow: 0px $base*2.5 $base*2.5 rgba(30, 95, 93, 0.4);
@@ -302,7 +312,6 @@ input[type="number"]::-webkit-inner-spin-button {
         background: none;
         border: none;
         cursor: pointer;
-        outline: none;
         font-size: $fs-xs;
         line-height: $base*6.5;
         font-weight: $fw-light;
@@ -330,7 +339,6 @@ input[type="number"]::-webkit-inner-spin-button {
     border: 1px solid $color-primary-400;
     border-radius: $base*2.5;
     padding: $base*3 $base*5;
-    outline: none;
     line-height: $base*6.5;
     font-weight: $fw-light;
     letter-spacing: 0.02em;
@@ -444,7 +452,6 @@ input[type="number"]::-webkit-inner-spin-button {
         border: 1px solid $color-primary-400;
         border-radius: $base*2.5;
         padding: $base*3 $base*5;
-        outline: none;
         line-height: $base*6.5;
         font-weight: $fw-light;
         letter-spacing: 0.02em;

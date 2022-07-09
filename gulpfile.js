@@ -1,11 +1,11 @@
-let gulp = require('gulp'),
-    sass = require('gulp-sass'),
-    rename = require('gulp-rename'),
-    autoprefixer = require('gulp-autoprefixer'),
-    browserSync = require('browser-sync'),
-    concat = require('gulp-concat'),
-    uglify = require('gulp-uglify'),
-    cssmin = require('gulp-cssmin');
+let gulp = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
+let rename = require('gulp-rename');
+let autoprefixer = require('gulp-autoprefixer');
+let browserSync = require('browser-sync');
+let concat = require('gulp-concat');
+let uglify = require('gulp-uglify');
+let cssmin = require('gulp-cssmin');
 
 
 gulp.task('sass', function() {
@@ -21,9 +21,9 @@ gulp.task('sass', function() {
 
 gulp.task('style', function() {
     return gulp.src([
-            'node_modules/normalize.css/normalize.css',
-            'node_modules/magnific-popup/dist/magnific-popup.css',
-            'node_modules/swiper/swiper-bundle.min.css'
+        'node_modules/normalize.css/normalize.css',
+        'node_modules/magnific-popup/dist/magnific-popup.css',
+        'node_modules/swiper/swiper-bundle.min.css'
         ])
         .pipe(concat('libs.min.css'))
         .pipe(cssmin())
@@ -32,8 +32,8 @@ gulp.task('style', function() {
 
 gulp.task('script', function() {
     return gulp.src([
-            'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
-            'node_modules/swiper/swiper-bundle.min.js',
+        'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
+        'node_modules/swiper/swiper-bundle.min.js',
         ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())
